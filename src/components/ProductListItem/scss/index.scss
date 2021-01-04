@@ -30,6 +30,11 @@
 
   &__image {
     background-color: $turquoise-light;
+
+    &:hover {
+      background: $hybrit-orange-gradient-transparent;
+    }
+
     display: flex;
     height: 350px;
     justify-content: center;

@@ -1,4 +1,10 @@
 // colors
+export const hybritOrangeDark = "#f15227";
+export const hybritOrangeLight = "#ff9b50";
+export const hybritOrangeExtraLight = "#ffaa6a";
+export const hybritOrange = "#ff7e1d";
+export const hybritOrangeGradientTransparent =
+  "linear-gradient(315deg, rgba(241,82,39,0.1), rgba(246,116,29,1))";
 export const autofillColor = "rgb(250, 255, 189)";
 export const autofillColorSelected = "rgb(232, 240, 254)";
 export const baseFontColor = "#323232";
@@ -30,7 +36,7 @@ export const secondaryBlue = "#036DFF";
 
 // theme colors
 export const theme = {
-  activeMenuOption: darkGreen,
+  activeMenuOption: hybritOrange,
   autofill: autofillColor,
   autofillSelected: autofillColorSelected,
   bannerBackground: secondaryGrey,
@@ -44,7 +50,7 @@ export const theme = {
   divider: grayLight,
   dividerDark: grayMedium,
   error: rose,
-  hoverLightBackground: turquoiseLight,
+  hoverLightBackground: hybritOrangeGradientTransparent,
   light: grayLight,
   lightFont: gray,
   listAttributeName: baseFontColorSemiTransparent,
@@ -52,7 +58,7 @@ export const theme = {
   overlay: overlayColor,
   primary: turquoise,
   primaryDark: turquoiseDark,
-  primaryLight: turquoiseLight,
+  primaryLight: hybritOrangeExtraLight,
   primaryTransparent: turquoiseTransparent,
   secondary: blue,
   secondaryDark: blueDark,
@@ -60,10 +66,10 @@ export const theme = {
   secondaryOverlay: blueOverlay,
   secondaryOverlayDark: blueOverlayDark,
   success: green,
-  tabTitle: darkGreen,
+  tabTitle: hybritOrangeDark,
   tableDivider: tabelGray,
   tabsBorder: baseFontColorTransparent,
-  thumbnailBorder: darkGreen,
+  thumbnailBorder: hybritOrangeExtraLight,
   white,
 };
 
