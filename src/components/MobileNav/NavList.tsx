@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import ReactSVG from "react-svg";
 import { commonMessages } from "@temp/intl";
 
+import { translateCategory } from "@utils/misc";
 import { baseUrl } from "../../app/routes";
 import NavItem, { INavItem } from "./NavItem";
 
@@ -63,6 +64,12 @@ class NavList extends React.PureComponent<NavListProps, NavListState> {
     const { hideOverlay } = this.props;
     const { displayedItems, parent } = this.state;
 
+    const translatedItems = displayedItems.map(item => {
+      const translatedName = translateCategory(item.name);
+      const newItem = { ...item, name: translatedName };
+      return newItem;
+    });
+
     return (
       <ul>
         {parent ? (
@@ -96,15 +103,16 @@ class NavList extends React.PureComponent<NavListProps, NavListState> {
             </li>
           </>
         )}
-
-        {displayedItems.map(item => (
-          <NavItem
-            key={item.id}
-            hideOverlay={hideOverlay}
-            showSubItems={this.handleShowSubItems}
-            {...item}
-          />
-        ))}
+        {translatedItems.map(item => {
+          return (
+            <NavItem
+              key={item.id}
+              hideOverlay={hideOverlay}
+              showSubItems={this.handleShowSubItems}
+              {...item}
+            />
+          );
+        })}
       </ul>
     );
   }

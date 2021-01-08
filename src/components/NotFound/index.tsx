@@ -18,19 +18,19 @@ const NotFound: React.FC<NotFoundProps> = () => (
     <div className="not-found-page__ruler" />
     <div className="not-found-page__message">
       <p>
-        <FormattedMessage defaultMessage="We can’t seem to find a page you are looking for!" />{" "}
+        <FormattedMessage defaultMessage="We kunnen een pagina die u zoekt niet vinden!" />{" "}
       </p>
       <p>
-        <FormattedMessage defaultMessage="You may have mistyped the address or the page may have moved." />{" "}
+        <FormattedMessage defaultMessage="Mogelijk hebt u het adres verkeerd getypt of is de pagina verplaatst." />{" "}
       </p>
       <p>
-        <FormattedMessage defaultMessage="We’re sorry for the error and hope you’ll have a good day." />
+        <FormattedMessage defaultMessage="Het spijt ons voor de fout en we hopen dat u een fijne dag zult hebben." />
       </p>
     </div>
     <div className="not-found-page__button">
       <Link to={BASE_URL}>
         <Button testingContext="404pageGotoHomeButton" secondary>
-          <FormattedMessage defaultMessage="Back to home" />
+          <FormattedMessage defaultMessage="Terug naar huis" />
         </Button>
       </Link>
     </div>

@@ -8,12 +8,12 @@ import { IProps } from "./types";
 
 const defaultShippingAddress = (
   <S.MenuItem>
-    <FormattedMessage defaultMessage="Set as default shipping address" />
+    <FormattedMessage defaultMessage="Instellen als standaard verzendadres" />
   </S.MenuItem>
 );
 const defaultBillingAddress = (
   <S.MenuItem>
-    <FormattedMessage defaultMessage="Set as default billing address" />
+    <FormattedMessage defaultMessage="Stel in als standaard factuuradres" />
   </S.MenuItem>
 );
 
@@ -50,11 +50,11 @@ export const AddressTile: React.FC<IProps> = ({
       />
 
       {address.isDefaultBillingAddress && address.isDefaultShippingAddress
-        ? intl.formatMessage({ defaultMessage: "Default Address" })
+        ? intl.formatMessage({ defaultMessage: "Standaard adres" })
         : address.isDefaultShippingAddress
-        ? intl.formatMessage({ defaultMessage: "Default Shipping Address" })
+        ? intl.formatMessage({ defaultMessage: "Standaard verzendadres" })
         : address.isDefaultBillingAddress
-        ? intl.formatMessage({ defaultMessage: "Default Billing Address" })
+        ? intl.formatMessage({ defaultMessage: "Standaard factuuradres" })
         : null}
     </S.HeaderContent>
   );

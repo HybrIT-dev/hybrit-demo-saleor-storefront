@@ -112,7 +112,7 @@ const AddressBook: React.FC<{
           }}
           address={addressData}
           submitBtnText={intl.formatMessage(commonMessages.save)}
-          title={intl.formatMessage({ defaultMessage: "Edit address" })}
+          title={intl.formatMessage({ defaultMessage: "Verander adres" })}
           {...{ countriesOptions: countries }}
           formId="address-form"
         />
