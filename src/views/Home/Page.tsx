@@ -48,13 +48,13 @@ const Page: React.FC<{
               <h1> HybrIT Connecting your business</h1>
             </span>
           </div>
-          <div>
+          {/* <div>
             <span className="home-page__hero__title">
               <h1>
                 <FormattedMessage defaultMessage="Up to 70% off sale" />
               </h1>
             </span>
-          </div>
+          </div> */}
         </div>
         <div className="home-page__hero-action">
           {loading && !categories ? (
