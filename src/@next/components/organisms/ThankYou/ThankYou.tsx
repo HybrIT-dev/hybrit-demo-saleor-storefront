@@ -12,12 +12,12 @@ import { IProps } from "./types";
 export const messages = defineMessages({
   unfulfilled: {
     defaultMessage:
-      "We’ve emailed you an order confirmation, and we’ll notify you when the order has been shipped.",
+      "We hebben u een orderbevestiging per e-mail gestuurd en laten u weten wanneer de bestelling is verzonden.",
     description: "thank you subtitle",
   },
   unconfirmed: {
     defaultMessage:
-      "Your order has been placed, it needs to be confirmed by the staff, we'll send you an email when it's done.",
+      "Je bestelling is geplaatst, deze moet worden bevestigd door het personeel, we sturen je een e-mail als het klaar is.",
     description: "thank you subtitle",
   },
 });
@@ -35,14 +35,14 @@ const ThankYou: React.FC<IProps> = ({
     <Container data-test="thankYouView">
       <S.Wrapper>
         <S.ThankYouHeader>
-          <FormattedMessage defaultMessage="Thank you" />
+          <FormattedMessage defaultMessage="Dank u" />
           <br />
           <span>
-            <FormattedMessage defaultMessage="for your order!" />
+            <FormattedMessage defaultMessage="voor uw bestelling!" />
           </span>
         </S.ThankYouHeader>
         <S.Paragraph>
-          <FormattedMessage defaultMessage="Your order number is" />{" "}
+          <FormattedMessage defaultMessage="Uw bestelnummer is" />{" "}
           <span>{orderNumber}</span>
         </S.Paragraph>
         <S.Paragraph>

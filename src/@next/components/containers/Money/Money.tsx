@@ -13,7 +13,8 @@ export const Money: React.FC<IProps> = ({
     <span {...props}>
       {money.currency && money.currency !== ""
         ? money.amount.toLocaleString(process.env.LANGUAGE_LOCALE, {
-            currency: money.currency,
+            // currency: money.currency,
+            currency: "EUR",
             style: "currency",
           })
         : money.amount.toString()}

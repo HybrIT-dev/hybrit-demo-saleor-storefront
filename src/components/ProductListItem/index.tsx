@@ -5,6 +5,7 @@ import * as React from "react";
 
 import { Thumbnail } from "@components/molecules";
 
+import { translateCategory } from "@utils/misc";
 import { TaxedMoney } from "../../@next/components/containers";
 import { FeaturedProducts_collection_products_edges_node } from "../ProductsFeatured/gqlTypes/FeaturedProducts";
 
@@ -37,7 +38,9 @@ const ProductListItem: React.FC<ProductListItemProps> = ({ product }) => {
         <Thumbnail source={product} />
       </div>
       <h4 className="product-list-item__title">{product.name}</h4>
-      <p className="product-list-item__category">{category?.name}</p>
+      <p className="product-list-item__category">
+        {translateCategory(category?.name)}
+      </p>
       <p className="product-list-item__price">{getProductPrice()}</p>
     </div>
   );

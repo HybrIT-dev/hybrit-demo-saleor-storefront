@@ -23,7 +23,7 @@ export const PasswordTile: React.FC = () => {
       <Tile>
         <S.Wrapper>
           <S.Header>
-            <FormattedMessage defaultMessage="MY PASSWORD" />
+            <FormattedMessage defaultMessage="MIJN WACHTWOORD" />
             {!isEditing && (
               <IconButton
                 testingContext="editPasswordButton"

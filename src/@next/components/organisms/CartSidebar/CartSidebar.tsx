@@ -114,7 +114,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
       <S.Wrapper ref={setElementRef()}>
         <CardHeader divider onHide={hide} prefix={<ReactSVG path={cartImg} />}>
           <span>
-            <FormattedMessage defaultMessage="My Cart" />
+            <FormattedMessage defaultMessage="Mijn winkelwagen" />
           </span>
         </CardHeader>
         <S.Content>
@@ -132,13 +132,13 @@ const CartSidebar: React.FC<ICartSidebar> = ({
             <S.EmptyCart>
               <S.EmptyCartTitle>
                 <FormattedMessage
-                  defaultMessage="Your cart is empty"
+                  defaultMessage="Uw winkelwagen is leeg"
                   description="cart sidebar title"
                 />
               </S.EmptyCartTitle>
               <S.EmptyCartDescription>
                 <FormattedMessage
-                  defaultMessage="You haven’t added anything to your bag. We’re sure you’ll find something in our store"
+                  defaultMessage="Je hebt niets aan je tas toegevoegd. We zijn er zeker van dat u iets in onze winkel zult vinden"
                   description="cart sidebar description"
                 />
               </S.EmptyCartDescription>
@@ -150,7 +150,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
                 onClick={continueShopping}
               >
                 <FormattedMessage
-                  defaultMessage="Continue shopping"
+                  defaultMessage="Doorgaan met winkelen"
                   description="button"
                 />
               </Button>
@@ -173,7 +173,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
               onClick={goToCart}
             >
               <FormattedMessage
-                defaultMessage="Go to my cart"
+                defaultMessage="Ga naar mijn winkelwagen"
                 description="button"
               />
             </Button>
@@ -185,7 +185,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
               onClick={proceedToCheckout}
             >
               <FormattedMessage
-                defaultMessage="Proceed to Checkout"
+                defaultMessage="Ga naar de kassa"
                 description="button"
               />
             </Button>

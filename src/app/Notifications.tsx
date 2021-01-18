@@ -18,10 +18,10 @@ const Notifications: React.FC = () => {
           actionText: intl.formatMessage({ defaultMessage: "Refresh" }),
           content: intl.formatMessage({
             defaultMessage:
-              "To update the application to the latest version, please refresh the page!",
+              "Vernieuw de pagina om de applicatie bij te werken naar de laatste versie!",
           }),
           title: intl.formatMessage({
-            defaultMessage: "New version is available!",
+            defaultMessage: "Er is een nieuwe versie beschikbaar!",
           }),
         },
         {
@@ -46,7 +46,7 @@ const Notifications: React.FC = () => {
         alert.show(
           {
             title: intl.formatMessage({
-              defaultMessage: "You are now logged in",
+              defaultMessage: "Je bent nu ingelogd",
             }),
           },
           { type: "success" }
@@ -55,7 +55,7 @@ const Notifications: React.FC = () => {
         alert.show(
           {
             title: intl.formatMessage({
-              defaultMessage: "You are now logged out",
+              defaultMessage: "Je bent nu uitgelogd",
             }),
           },
           { type: "success" }

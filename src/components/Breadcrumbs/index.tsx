@@ -5,6 +5,7 @@ import Media from "react-media";
 import { Link } from "react-router-dom";
 import { commonMessages } from "@temp/intl";
 
+import { translateCategory } from "@utils/misc";
 import { baseUrl } from "../../app/routes";
 import { getDBIdFromGraphqlId, slugify } from "../../core/utils";
 import { Category_category } from "../../views/Category/gqlTypes/Category";
@@ -64,14 +65,16 @@ const Breadcrumbs: React.FC<{
                 breadcrumbs__active: index === breadcrumbs.length - 1,
               })}
             >
-              <Link to={breadcrumb.link}>{breadcrumb.value}</Link>
+              <Link to={breadcrumb.link}>
+                {translateCategory(breadcrumb.value)}
+              </Link>
             </li>
           ))}
         </ul>
       ) : (
         <div className="breadcrumbs">
           <Link to={getBackLink(breadcrumbs)}>
-            <FormattedMessage defaultMessage="Back" />
+            <FormattedMessage defaultMessage="Terug" />
           </Link>
         </div>
       )

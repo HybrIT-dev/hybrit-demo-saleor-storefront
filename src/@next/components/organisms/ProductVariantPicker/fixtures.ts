@@ -42,14 +42,14 @@ export const productVariants: ProductDetails_product_variants[] = [
       {
         attribute: {
           id: "QXR0cmlidXRlOjI1",
-          name: "Material",
+          name: "Materiaal",
           slug: "material",
           __typename: "Attribute",
         },
         values: [
           {
             id: "QXR0cmlidXRlVmFsdWU6ODI=",
-            name: "cotton",
+            name: "katoen",
             value: "cotton",
             __typename: "AttributeValue",
           },
@@ -59,7 +59,7 @@ export const productVariants: ProductDetails_product_variants[] = [
       {
         attribute: {
           id: "QXR0cmlidXRlOjIw",
-          name: "Color",
+          name: "Kleur",
           slug: "color",
           __typename: "Attribute",
         },
@@ -76,7 +76,7 @@ export const productVariants: ProductDetails_product_variants[] = [
       {
         attribute: {
           id: "QXR0cmlidXRlOjE1",
-          name: "Size",
+          name: "Maat",
           slug: "size",
           __typename: "Attribute",
         },
@@ -133,14 +133,14 @@ export const productVariants: ProductDetails_product_variants[] = [
       {
         attribute: {
           id: "QXR0cmlidXRlOjI1",
-          name: "Material",
+          name: "Materiaal",
           slug: "material",
           __typename: "Attribute",
         },
         values: [
           {
             id: "QXR0cmlidXRlVmFsdWU6ODY=",
-            name: "wool",
+            name: "wol",
             value: "wool",
             __typename: "AttributeValue",
           },
@@ -150,7 +150,7 @@ export const productVariants: ProductDetails_product_variants[] = [
       {
         attribute: {
           id: "QXR0cmlidXRlOjIw",
-          name: "Color",
+          name: "Kleur",
           slug: "color",
           __typename: "Attribute",
         },
@@ -167,7 +167,7 @@ export const productVariants: ProductDetails_product_variants[] = [
       {
         attribute: {
           id: "QXR0cmlidXRlOjE1",
-          name: "Size",
+          name: "Maat",
           slug: "size",
           __typename: "Attribute",
         },

@@ -58,10 +58,10 @@ export const items = [
   },
   {
     id: "TWVudUl0ZW06Mjcy",
-    name: "Groceries",
+    name: "Voedingswaar",
     category: {
       id: "Q2F0ZWdvcnk6OA==",
-      name: "Groceries",
+      name: "Voedingswaar",
       __typename: "Category",
     },
     url: null,
@@ -73,10 +73,10 @@ export const items = [
   },
   {
     id: "TWVudUl0ZW06Mjcz",
-    name: "Apparel",
+    name: "Kleding",
     category: {
       id: "Q2F0ZWdvcnk6OQ==",
-      name: "Apparel",
+      name: "Kleding",
       __typename: "Category",
     },
     url: null,
