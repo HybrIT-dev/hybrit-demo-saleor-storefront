@@ -69,7 +69,7 @@ const Page: React.FC<{
                 )}
               >
                 <Button testingContext="homepageHeroActionButton">
-                  <FormattedMessage defaultMessage="Winkel Uitverkoop" />
+                  <FormattedMessage defaultMessage="Bekijk Onze Diensten" />
                 </Button>
               </Link>
             )

@@ -67,6 +67,9 @@ export const commonMessages = defineMessages({
   qty: {
     defaultMessage: "Hoeveelheid",
   },
+  qtyHours: {
+    defaultMessage: "Uren",
+  },
   subtotal: {
     defaultMessage: "Subtotaal",
   },
