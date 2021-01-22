@@ -53,7 +53,10 @@ export const commonMessages = defineMessages({
     defaultMessage: "Wachtwoord",
   },
   quantity: {
-    defaultMessage: "Aantal stuks",
+    defaultMessage: "Aantal",
+  },
+  quantityHours: {
+    defaultMessage: "Aantal Uren",
   },
   sku: {
     defaultMessage: "SKU",

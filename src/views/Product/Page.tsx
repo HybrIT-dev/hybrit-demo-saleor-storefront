@@ -61,8 +61,13 @@ const Page: React.FC<
     overlayContext.show(OverlayType.cart, OverlayTheme.right);
   };
 
+  const breadcrumbs = populateBreadcrumbs(product);
+  const isEngineer = breadcrumbs[0].value === "Software Engineering";
+  console.log(isEngineer);
+
   const addToCartSection = (
     <AddToCartSection
+      isEngineer={isEngineer}
       items={items}
       productId={product.id}
       name={product.name}

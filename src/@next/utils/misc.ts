@@ -18,7 +18,7 @@ export function filterNotEmptyArrayItems<TValue>(
 export const translateCategory = (name: string) => {
   switch (name) {
     case "Accessories":
-      return "Accessoires";
+      return "Consultancy";
     case "Groceries":
       return "Voedingswaren";
     case "Apparel":
