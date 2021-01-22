@@ -63,7 +63,6 @@ const Page: React.FC<
 
   const breadcrumbs = populateBreadcrumbs(product);
   const isEngineer = breadcrumbs[0].value === "Software Engineering";
-  console.log(isEngineer);
 
   const addToCartSection = (
     <AddToCartSection

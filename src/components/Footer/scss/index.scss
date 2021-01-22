@@ -45,7 +45,7 @@
   }
 
   &-nav {
-    background-color: $gray-light;
+    background-color: $black;
     padding: $spacer * 3 0 $spacer * 2;
 
     .container {
@@ -62,6 +62,7 @@
         font-weight: $bold-font-weight;
         margin-bottom: $spacer;
         text-transform: uppercase;
+        color: $hybrit-orange-extra-light;
       }
 
       &-content {
