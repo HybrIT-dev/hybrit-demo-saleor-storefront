@@ -33,7 +33,8 @@
     }
 
     &__title {
-      background-color: $black;
+      background-color: $white;
+
       display: inline-block;
       transform: skew(45deg);
       padding: $spacer $spacer * 3;
@@ -49,7 +50,7 @@
         transform: skew(-45deg);
         font-weight: $bold-font-weight;
         text-transform: uppercase;
-        color: $white;
+        color: $black;
         font-size: $h2-font-size;
         font-weight: 900;
 

@@ -3,7 +3,7 @@ import "./scss/index.scss";
 import * as React from "react";
 
 import { channelSlug } from "@temp/constants";
-import planet from "../../images/planeet-afbeelding.jpg";
+import planet from "../../images/hybrit-afbeelding.jpg";
 
 import { MetaWrapper } from "../../components";
 import Page from "./Page";
