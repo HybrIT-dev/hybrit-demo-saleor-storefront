@@ -3,7 +3,7 @@ import "./scss/index.scss";
 import * as React from "react";
 
 import { channelSlug } from "@temp/constants";
-import planet from "../../images/hybrit-afbeelding.jpg";
+import hybritImage from "../../images/hybrit-afbeelding.jpg";
 
 import { MetaWrapper } from "../../components";
 import Page from "./Page";
@@ -20,7 +20,7 @@ const View: React.FC = () => (
       {({ data, loading }) => {
         const planetImage = {
           ...data.collection?.backgroundImage,
-          url: planet,
+          url: hybritImage,
         };
         return (
           <MetaWrapper

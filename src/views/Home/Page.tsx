@@ -49,13 +49,6 @@ const Page: React.FC<{
               <h1> HybrIT Connecting your business</h1>
             </span>
           </div>
-          {/* <div>
-            <span className="home-page__hero__title">
-              <h1>
-                <FormattedMessage defaultMessage="Tot 70% korting" />
-              </h1>
-            </span>
-          </div> */}
         </div>
         <div className="home-page__hero-action">
           {loading && !categories ? (
