@@ -80,7 +80,7 @@
         font-weight: 900;
 
         @media (max-width: $small-screen) {
-          font-size: $h4-font-size;
+          font-size: 32px;
         }
 
         @media (min-width: $small-screen) and (max-width: $medium-screen) {
