@@ -67,9 +67,8 @@ export const OrderTabel: React.FC<IProps> = ({ orders, history }: IProps) => {
                       {matches ? (
                         <>
                           <S.ProductsOrdered>
-                            {order.node.lines
-                              .slice(0, 5)
-                              .map((product: any) => (
+                            {order.node.lines.slice(0, 5).map((product: any) =>
+                              product ? (
                                 <span
                                   key={product.variant.product.id}
                                   onClick={evt => {
@@ -84,7 +83,8 @@ export const OrderTabel: React.FC<IProps> = ({ orders, history }: IProps) => {
                                 >
                                   <Thumbnail source={product} />
                                 </span>
-                              ))}
+                              ) : null
+                            )}
                           </S.ProductsOrdered>
                           <S.DateOfOrder>
                             <FormattedDate value={date} />
