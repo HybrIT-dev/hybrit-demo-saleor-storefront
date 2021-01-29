@@ -62,7 +62,9 @@ const Page: React.FC<
   };
 
   const breadcrumbs = populateBreadcrumbs(product);
-  const isEngineer = breadcrumbs[0].value === "Software Engineering";
+  const isEngineer =
+    breadcrumbs[0].value === "Software Engineering" ||
+    breadcrumbs[0].value === "DevOps";
 
   const addToCartSection = (
     <AddToCartSection

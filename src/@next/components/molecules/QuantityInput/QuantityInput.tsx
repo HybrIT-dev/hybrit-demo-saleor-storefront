@@ -74,7 +74,7 @@ export const QuantityInput: React.FC<IQuantityInput> = ({
       onChange={handleQuantityChange}
       errors={quantityErrors}
       data-test={testingContext}
-      data-testId={testingContextId}
+      data-testid={testingContextId}
     />
   );
 };
