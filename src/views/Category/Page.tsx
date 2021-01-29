@@ -87,6 +87,8 @@ const Page: React.FC<PageProps> = ({
     );
 
   const isDevopsEngineer = extractBreadcrumbs(category)[1].value === "DevOps";
+  const isSoftwareEngineer =
+    extractBreadcrumbs(category)[1].value === "Software Engineering";
 
   return (
     <div className="category">
@@ -113,9 +115,9 @@ const Page: React.FC<PageProps> = ({
         <h2>
           {isDevopsEngineer ? (
             <FormattedMessage defaultMessage="Deze DevOps engineers hebben we voor je klaar staan!" />
-          ) : (
+          ) : isSoftwareEngineer ? (
             <FormattedMessage defaultMessage="Deze Software Engineers hebben we voor je klaar staan!" />
-          )}
+          ) : null}
         </h2>
         {canDisplayProducts && (
           <ProductList
