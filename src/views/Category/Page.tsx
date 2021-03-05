@@ -86,9 +86,9 @@ const Page: React.FC<PageProps> = ({
       []
     );
 
-  const isDevopsEngineer = extractBreadcrumbs(category)[1].value === "DevOps";
+  const isDevopsEngineer = extractBreadcrumbs(category)[1]?.value === "DevOps";
   const isSoftwareEngineer =
-    extractBreadcrumbs(category)[1].value === "Software Engineering";
+    extractBreadcrumbs(category)[1]?.value === "Software Engineering";
 
   return (
     <div className="category">
