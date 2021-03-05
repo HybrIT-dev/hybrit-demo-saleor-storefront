@@ -32,7 +32,7 @@ const ProductRow: React.FC<ReadProductRowProps & EditableProductRowProps> = ({
   processing,
   line,
 }) => {
-  const productUrl = generateProductUrl(line.product.id, line.product.name);
+  const productUrl = generateProductUrl(line.product?.id, line.product?.name);
 
   return (
     <tr
@@ -47,19 +47,19 @@ const ProductRow: React.FC<ReadProductRowProps & EditableProductRowProps> = ({
               <Thumbnail source={line.product} />
             </Link>
           )}
-          <Link to={productUrl}>{line.product.name}</Link>
+          <Link to={productUrl}>{line.product?.name}</Link>
         </div>
       </td>
 
       {mediumScreen && (
         <td>
-          <TaxedMoney taxedMoney={line.pricing.price} />
+          <TaxedMoney taxedMoney={line.pricing?.price} />
         </td>
       )}
 
       <td>
         {line.attributes.map(({ attribute, values }, attributeIndex) => (
-          <p key={attribute.id}>
+          <p key={attribute?.id}>
             {attribute.name}: {values.map(value => value.name).join(", ")}
           </p>
         ))}

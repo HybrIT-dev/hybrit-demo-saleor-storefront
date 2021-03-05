@@ -70,6 +70,8 @@ const Page: React.FC<PageProps> = ({
     },
   ];
 
+  // console.log("\n\n\n", breadcrumbs, "\n\n\n\n");
+
   const getAttribute = (attributeSlug: string, valueSlug: string) => {
     return {
       attributeSlug,
