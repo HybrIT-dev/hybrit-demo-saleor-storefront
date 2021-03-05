@@ -14,3 +14,24 @@ export function filterNotEmptyArrayItems<TValue>(
 ): value is TValue {
   return value !== null && value !== undefined;
 }
+
+export const translateCategory = (name: string) => {
+  switch (name) {
+    case "Accessories":
+      return "Consultancy";
+    case "Groceries":
+      return "Voedingswaren";
+    case "Apparel":
+      return "Kleding";
+    case "Address":
+      return "Adres";
+    case "Paints":
+      return "Verven";
+    case "Juices":
+      return "Sappen";
+    case "Homewares":
+      return "Huishoudmiddelen";
+    default:
+      return name;
+  }
+};

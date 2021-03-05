@@ -23,6 +23,7 @@ import {
 const LOW_STOCK_QUANTITY: number = 5;
 
 export interface IAddToCartSection {
+  isEngineer?: boolean;
   productId: string;
   productVariants: ProductDetails_product_variants[];
   name: string;
@@ -38,6 +39,7 @@ export interface IAddToCartSection {
 }
 
 const AddToCartSection: React.FC<IAddToCartSection> = ({
+  isEngineer,
   availableForPurchase,
   isAvailableForPurchase,
   items,
@@ -88,7 +90,7 @@ const AddToCartSection: React.FC<IAddToCartSection> = ({
   const renderErrorMessage = (message: string, testingContextId: string) => (
     <S.ErrorMessage
       data-test="stockErrorMessage"
-      data-testId={testingContextId}
+      data-testid={testingContextId}
     >
       {message}
     </S.ErrorMessage>
@@ -163,6 +165,7 @@ const AddToCartSection: React.FC<IAddToCartSection> = ({
       </S.VariantPicker>
       <S.QuantityInput>
         <QuantityInput
+          isEngineer={isEngineer}
           quantity={quantity}
           maxQuantity={availableQuantity}
           disabled={isOutOfStock || isNoItemsAvailable}

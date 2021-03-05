@@ -2,7 +2,6 @@
 
 .home-page {
   &__hero {
-    background-color: $hybrit-orange-extra-light;
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
@@ -30,10 +29,37 @@
         margin-bottom: $spacer * 3;
         width: 100%;
       }
+
+      @media (max-width: $small-screen) {
+        &-text {
+          margin-top: $spacer * 15;
+          width: 100%;
+        }
+      }
+      @media screen and (max-height: 700px) {
+        &-text {
+          margin-top: $spacer * 10;
+          width: 100%;
+        }
+        &-action {
+          margin-bottom: $spacer * 15;
+          width: 100%;
+        }
+      }
+      @media screen and (min-height: 700px) {
+        &-text {
+          margin-top: $spacer * 10;
+          width: 100%;
+        }
+        &-action {
+          margin-bottom: $spacer * 20;
+          width: 100%;
+        }
+      }
     }
 
     &__title {
-      background-color: $black;
+      background-color: $white;
       display: inline-block;
       transform: skew(45deg);
       padding: $spacer $spacer * 3;
@@ -49,12 +75,12 @@
         transform: skew(-45deg);
         font-weight: $bold-font-weight;
         text-transform: uppercase;
-        color: $white;
+        color: $black;
         font-size: $h2-font-size;
         font-weight: 900;
 
         @media (max-width: $small-screen) {
-          font-size: $h4-font-size;
+          font-size: 32px;
         }
 
         @media (min-width: $small-screen) and (max-width: $medium-screen) {

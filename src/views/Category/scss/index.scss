@@ -30,4 +30,18 @@
       }
     }
   }
+  h2 {
+    display: inline-block;
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+    color: $black;
+    font-size: 4vw;
+    font-weight: 900;
+    margin-bottom: $spacer * 2;
+    margin-top: $spacer;
+
+    @media (min-width: $small-screen) {
+      font-size: 2vw;
+    }
+  }
 }

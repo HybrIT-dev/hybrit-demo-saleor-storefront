@@ -98,6 +98,11 @@ export const CartRow: React.FC<IProps> = ({
     : undefined;
 
   const productUrl = generateProductUrl(id, name);
+  const engineerSkuCodes = ["1237", "1234", "1235", "1236"];
+  const isEngineer = engineerSkuCodes.includes(sku as string);
+  const labelNameType = isEngineer
+    ? intl.formatMessage(commonMessages.qtyHours)
+    : intl.formatMessage(commonMessages.qty);
 
   return (
     <S.Wrapper cartRowType={type} data-test="cartRow" data-test-id={sku}>
@@ -133,7 +138,7 @@ export const CartRow: React.FC<IProps> = ({
       <S.Quantity cartRowType={type}>
         <Input
           name="quantity"
-          label={intl.formatMessage(commonMessages.qty)}
+          label={labelNameType}
           value={tempQuantity}
           onBlur={handleBlurQuantityInput}
           onChange={handleQuantityChange}

@@ -49,25 +49,25 @@ export const PasswordChangeForm: React.FC<{
           } = {};
           if (!values.confirmPassword) {
             errors.confirmPassword = intl.formatMessage({
-              defaultMessage: "Required field",
+              defaultMessage: "verplicht veld",
             });
           }
           if (!values.newPassword) {
             errors.newPassword = intl.formatMessage({
-              defaultMessage: "Required field",
+              defaultMessage: "verplicht veld",
             });
           }
           if (!values.oldPassword) {
             errors.oldPassword = intl.formatMessage({
-              defaultMessage: "Required field",
+              defaultMessage: "verplicht veld",
             });
           }
           if (values.confirmPassword !== values.newPassword) {
             errors.confirmPassword = intl.formatMessage({
-              defaultMessage: "Passwords do not match",
+              defaultMessage: "Wachtwoorden komen niet overeen",
             });
             errors.newPassword = intl.formatMessage({
-              defaultMessage: "Passwords do not match",
+              defaultMessage: "Wachtwoorden komen niet overeen",
             });
           }
           return errors;
@@ -87,7 +87,7 @@ export const PasswordChangeForm: React.FC<{
             <S.Form onSubmit={handleSubmit} data-test="changePasswordForm">
               <TextField
                 name="oldPassword"
-                label={intl.formatMessage({ defaultMessage: "Old Password" })}
+                label={intl.formatMessage({ defaultMessage: "Oud Wachtwoord" })}
                 type="password"
                 value={values.oldPassword}
                 onBlur={handleBlur}
@@ -100,7 +100,9 @@ export const PasswordChangeForm: React.FC<{
               />
               <TextField
                 name="newPassword"
-                label={intl.formatMessage({ defaultMessage: "New Password" })}
+                label={intl.formatMessage({
+                  defaultMessage: "Nieuw Wachtwoord",
+                })}
                 type="password"
                 value={values.newPassword}
                 onBlur={handleBlur}
@@ -114,7 +116,7 @@ export const PasswordChangeForm: React.FC<{
               <TextField
                 name="confirmPassword"
                 label={intl.formatMessage({
-                  defaultMessage: "Confirm Password",
+                  defaultMessage: "Bevestig Wachtwoord",
                 })}
                 type="password"
                 value={values.confirmPassword}

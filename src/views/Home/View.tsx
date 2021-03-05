@@ -3,6 +3,8 @@ import "./scss/index.scss";
 import * as React from "react";
 
 import { channelSlug } from "@temp/constants";
+import hybritImage from "../../images/hybrit-afbeelding.jpg";
+
 import { MetaWrapper } from "../../components";
 import Page from "./Page";
 import { TypedHomePageQuery } from "./queries";
@@ -16,6 +18,10 @@ const View: React.FC = () => (
       errorPolicy="all"
     >
       {({ data, loading }) => {
+        const planetImage = {
+          ...data.collection?.backgroundImage,
+          url: hybritImage,
+        };
         return (
           <MetaWrapper
             meta={{
@@ -25,7 +31,7 @@ const View: React.FC = () => (
           >
             <Page
               loading={loading}
-              backgroundImage={data.collection?.backgroundImage}
+              backgroundImage={planetImage}
               categories={data.categories}
               shop={data.shop}
             />

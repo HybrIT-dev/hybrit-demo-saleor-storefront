@@ -2,130 +2,136 @@ import { defineMessages, IntlShape } from "react-intl";
 
 export const commonMessages = defineMessages({
   search: {
-    defaultMessage: "search",
+    defaultMessage: "zoeken",
   },
   outOfStock: {
-    defaultMessage: "Out of stock",
+    defaultMessage: "Niet op voorraad",
   },
   lowStock: {
-    defaultMessage: "Low stock",
+    defaultMessage: "Lage voorraad",
   },
   noItemsAvailable: {
-    defaultMessage: "No items available",
+    defaultMessage: "Geen items beschikbaar",
   },
   noPurchaseAvailable: {
-    defaultMessage: "Not available for purchase",
+    defaultMessage: "Niet beschikbaar voor verkoop",
   },
   purchaseAvailableOn: {
-    defaultMessage: `Will become available for purchase on {date} at {time}`,
+    defaultMessage: `Komt beschikbaar voor aankoop op {date} om {time}`,
   },
   youMightLike: {
-    defaultMessage: "You might like",
+    defaultMessage: "Je houdt misschien van",
   },
   choosePaymentMethod: {
-    defaultMessage: "Please choose payment method.",
+    defaultMessage: "Kies een betalingsmethode.",
   },
   provideEmailAddress: {
-    defaultMessage: "Please provide email address.",
+    defaultMessage: "Geef een e-mailadres op.",
   },
   account: {
     defaultMessage: "Account",
   },
   myAccount: {
-    defaultMessage: "My Account",
+    defaultMessage: "Mijn Account",
   },
   orderHistory: {
-    defaultMessage: "Order history",
+    defaultMessage: "Bestelgeschiedenis",
   },
   addressBook: {
-    defaultMessage: "Address book",
+    defaultMessage: "Adresboek",
   },
   logOut: {
-    defaultMessage: "Log Out",
+    defaultMessage: "Uitloggen",
   },
   firstName: {
-    defaultMessage: "First Name",
+    defaultMessage: "Voornaam",
   },
   lastName: {
-    defaultMessage: "Last Name",
+    defaultMessage: "Achternaam",
   },
   password: {
-    defaultMessage: "Password",
+    defaultMessage: "Wachtwoord",
   },
   quantity: {
-    defaultMessage: "Quantity",
+    defaultMessage: "Aantal",
+  },
+  quantityHours: {
+    defaultMessage: "Aantal Uren",
   },
   sku: {
     defaultMessage: "SKU",
   },
   maxQtyIs: {
-    defaultMessage: "Maximum quantity is {maxQuantity}",
+    defaultMessage: "Maximale hoeveelheid is {maxQuantity}",
   },
   qty: {
-    defaultMessage: "Quantity",
+    defaultMessage: "Hoeveelheid",
+  },
+  qtyHours: {
+    defaultMessage: "Uren",
   },
   subtotal: {
-    defaultMessage: "Subtotal",
+    defaultMessage: "Subtotaal",
   },
   shipping: {
-    defaultMessage: "Shipping",
+    defaultMessage: "Verzending",
   },
   promoCode: {
-    defaultMessage: "Promo code",
+    defaultMessage: "Promotiecode",
   },
   total: {
-    defaultMessage: "Total",
+    defaultMessage: "Totaal",
   },
   totalPrice: {
-    defaultMessage: "Total Price",
+    defaultMessage: "Totale prijs",
   },
   checkout: {
-    defaultMessage: "Checkout",
+    defaultMessage: "Afrekenen",
   },
   eMail: {
-    defaultMessage: "Email Address",
+    defaultMessage: "E-mailadres",
   },
   shortEmail: {
     defaultMessage: "Email",
   },
   loading: {
-    defaultMessage: "Loading",
+    defaultMessage: "Laden",
   },
   products: {
-    defaultMessage: "Products",
+    defaultMessage: "Produkten",
   },
   price: {
-    defaultMessage: "Price",
+    defaultMessage: "Prijs",
   },
   variant: {
     defaultMessage: "Variant",
   },
   phone: {
-    defaultMessage: "Phone",
+    defaultMessage: "Telefoon",
   },
   phoneNumber: {
-    defaultMessage: "Phone number: {phone}",
+    defaultMessage: "Telefoonnummer: {phone}",
   },
   showEmail: {
-    defaultMessage: "Email: {email}",
+    defaultMessage: "E-mail: {email}",
   },
   save: {
-    defaultMessage: "Save",
+    defaultMessage: "Opslaan",
   },
   add: {
-    defaultMessage: "Add",
+    defaultMessage: "Toevoegen",
   },
   filterHeader: {
     defaultMessage: "FILTERS",
   },
   clearFilterHeader: {
-    defaultMessage: "CLEAR FILTERS",
+    defaultMessage: "VERWIJDER FILTERS",
   },
   status: {
     defaultMessage: "Status",
   },
   cancel: {
-    defaultMessage: "Cancel",
+    defaultMessage: "annuleren",
   },
   home: {
     defaultMessage: "Home",
@@ -134,109 +140,109 @@ export const commonMessages = defineMessages({
 
 export const checkoutMessages = defineMessages({
   stepNameAddress: {
-    defaultMessage: "Address",
+    defaultMessage: "Adres",
   },
   stepNameShipping: {
-    defaultMessage: "Shipping",
+    defaultMessage: "Verzending",
   },
   stepNamePayment: {
-    defaultMessage: "Payment",
+    defaultMessage: "Betaling",
   },
   stepNameReview: {
-    defaultMessage: "Review",
+    defaultMessage: "Bekijk",
   },
   addressNextActionName: {
-    defaultMessage: "Continue to Shipping",
+    defaultMessage: "Ga verder naar Verzenden",
   },
   shippingNextActionName: {
-    defaultMessage: "Continue to Payment",
+    defaultMessage: "Ga verder met betalen",
   },
   paymentNextActionName: {
-    defaultMessage: "Continue to Review",
+    defaultMessage: "Ga door naar beoordeling",
   },
   reviewNextActionName: {
-    defaultMessage: "Place order",
+    defaultMessage: "Plaats bestelling",
   },
   addNewAddress: {
-    defaultMessage: "Add new address",
+    defaultMessage: "Nieuw adres toevoegen",
   },
   shippingMethod: {
-    defaultMessage: "SHIPPING METHOD",
+    defaultMessage: "VERZENDMETHODE",
   },
   billingAddress: {
-    defaultMessage: "BILLING ADDRESS",
+    defaultMessage: "Facturatieadres",
   },
   paymentMethod: {
-    defaultMessage: "PAYMENT METHOD",
+    defaultMessage: "BETALINGSMIDDEL",
   },
   reviewOrder: {
-    defaultMessage: "REVIEW ORDER",
+    defaultMessage: "CONTROLEER ORDER",
   },
   shippingAddress: {
-    defaultMessage: "Shipping Address",
+    defaultMessage: "Verzendingsadres",
   },
   continueShopping: {
-    defaultMessage: "CONTINUE SHOPPING",
+    defaultMessage: "DOORGAAN MET WINKELEN",
   },
 });
 
 export const prodListHeaderCommonMsg = defineMessages({
   sortOptionsClear: {
-    defaultMessage: "Clear...",
+    defaultMessage: "Verwijder...",
   },
   sortOptionsPrice: {
-    defaultMessage: "Price Low-High",
+    defaultMessage: "Prijs Laag-Hoog",
   },
   sortOptionsPriceDsc: {
-    defaultMessage: "Price High-Low",
+    defaultMessage: "Prijs Hoog-Laag",
   },
   sortOptionsName: {
-    defaultMessage: "Name Increasing",
+    defaultMessage: "Naam Stijgend",
   },
   sortOptionsNameDsc: {
-    defaultMessage: "Name Decreasing",
+    defaultMessage: "Naam Dalend",
   },
   sortOptionsUpdatedAt: {
-    defaultMessage: "Last updated Ascending",
+    defaultMessage: "Laatst Bijgewerkt Oplopend",
   },
   sortOptionsUpdatedAtDsc: {
-    defaultMessage: "Last updated Descending",
+    defaultMessage: "Laatst Bijgewerkt Aflopend",
   },
 });
 
 export const paymentStatusMessages = defineMessages({
   notCharged: {
-    defaultMessage: "Not charged",
+    defaultMessage: "Niet in rekening gebracht",
   },
   partiallyCharged: {
-    defaultMessage: "Partially charged",
+    defaultMessage: "Gedeeltelijk in rekening gebracht",
   },
   fullyCharged: {
-    defaultMessage: "Fully charged",
+    defaultMessage: "Volledig in rekening gebracht",
   },
   partiallyRefunded: {
-    defaultMessage: "Partially refunded",
+    defaultMessage: "Gedeeltelijk terugbetaald",
   },
   fullyRefunded: {
-    defaultMessage: "Fully refunded",
+    defaultMessage: "Volledig terugbetaald",
   },
 });
 
 export const orderStatusMessages = defineMessages({
   draft: {
-    defaultMessage: "Draft",
+    defaultMessage: "E-mailconcept",
   },
   unfulfilled: {
-    defaultMessage: "Unfulfilled",
+    defaultMessage: "Niet vervuld",
   },
   partiallyFulfilled: {
-    defaultMessage: "Partially fulfilled",
+    defaultMessage: "Gedeeltelijk vervuld",
   },
   fulfilled: {
-    defaultMessage: "Fulfilled",
+    defaultMessage: "Vervuld",
   },
   canceled: {
-    defaultMessage: "Canceled",
+    defaultMessage: "Geannuleerd",
   },
 });
 

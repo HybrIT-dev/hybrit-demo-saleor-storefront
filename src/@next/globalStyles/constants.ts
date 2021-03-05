@@ -23,6 +23,7 @@ export const grayLight = "#f1f5f5";
 export const green = "#3ed256";
 export const overlayColor = "rgba(199, 207, 207, 0.8)";
 export const rose = "#c22d74";
+export const red = "#be0000";
 export const turquoise = "#13bebb";
 export const turquoiseDark = "#06a09e";
 export const turquoiseLight = "rgba(6, 132, 123, 0.25)";
@@ -49,7 +50,7 @@ export const theme = {
   disabled: gray,
   divider: grayLight,
   dividerDark: grayMedium,
-  error: rose,
+  error: red,
   hoverLightBackground: hybritOrangeGradientTransparent,
   light: grayLight,
   lightFont: gray,
@@ -57,12 +58,12 @@ export const theme = {
   listBullet: darkGreen,
   overlay: overlayColor,
   primary: turquoise,
-  primaryDark: turquoiseDark,
+  primaryDark: black,
   primaryLight: hybritOrangeExtraLight,
   primaryTransparent: turquoiseTransparent,
-  secondary: blue,
-  secondaryDark: blueDark,
-  secondaryLight: blueLight,
+  secondary: hybritOrange,
+  secondaryDark: hybritOrangeDark,
+  secondaryLight: hybritOrangeLight,
   secondaryOverlay: blueOverlay,
   secondaryOverlayDark: blueOverlayDark,
   success: green,

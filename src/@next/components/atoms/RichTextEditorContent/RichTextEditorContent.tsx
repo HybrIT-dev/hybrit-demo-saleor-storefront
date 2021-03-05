@@ -50,6 +50,7 @@ export const RichTextEditorContent: React.FC<RichTextEditorContentProps> = ({
         holder: editorContainer.current,
         readOnly: true,
         tools,
+        minHeight: 30,
       });
     }
 

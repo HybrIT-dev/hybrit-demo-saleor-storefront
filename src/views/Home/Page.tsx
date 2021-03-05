@@ -5,6 +5,7 @@ import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
+import { translateCategory } from "@utils/misc";
 import { Button, Loader, ProductsFeatured } from "../../components";
 import { generateCategoryUrl } from "../../core/utils";
 
@@ -48,13 +49,6 @@ const Page: React.FC<{
               <h1> HybrIT Connecting your business</h1>
             </span>
           </div>
-          <div>
-            <span className="home-page__hero__title">
-              <h1>
-                <FormattedMessage defaultMessage="Up to 70% off sale" />
-              </h1>
-            </span>
-          </div>
         </div>
         <div className="home-page__hero-action">
           {loading && !categories ? (
@@ -68,7 +62,7 @@ const Page: React.FC<{
                 )}
               >
                 <Button testingContext="homepageHeroActionButton">
-                  <FormattedMessage defaultMessage="Shop sale" />
+                  <FormattedMessage defaultMessage="Bekijk Onze Diensten" />
                 </Button>
               </Link>
             )
@@ -76,13 +70,13 @@ const Page: React.FC<{
         </div>
       </div>
       <ProductsFeatured
-        title={intl.formatMessage({ defaultMessage: "Featured" })}
+        title={intl.formatMessage({ defaultMessage: "Uitgelicht" })}
       />
       {categoriesExist() && (
         <div className="home-page__categories">
           <div className="container">
             <h3>
-              <FormattedMessage defaultMessage="Shop by category" />
+              <FormattedMessage defaultMessage="WINKELEN PER CATEGORIE" />
             </h3>
             <div className="home-page__categories__list">
               {categories.edges.map(({ node: category }) => (
@@ -106,7 +100,7 @@ const Page: React.FC<{
                         })`,
                       }}
                     />
-                    <h3>{category.name}</h3>
+                    <h3>{translateCategory(category.name)}</h3>
                   </Link>
                 </div>
               ))}

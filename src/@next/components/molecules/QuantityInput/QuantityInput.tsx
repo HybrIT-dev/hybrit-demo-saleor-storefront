@@ -6,6 +6,7 @@ import { commonMessages } from "@temp/intl";
 
 export interface IQuantityInput {
   quantity: number;
+  isEngineer?: boolean;
   maxQuantity: number;
   disabled: boolean;
   onQuantityChange: (value: number) => void;
@@ -22,6 +23,7 @@ export interface IQuantityInput {
 }
 
 export const QuantityInput: React.FC<IQuantityInput> = ({
+  isEngineer,
   disabled,
   quantity,
   maxQuantity,
@@ -57,18 +59,22 @@ export const QuantityInput: React.FC<IQuantityInput> = ({
         ]
       : undefined;
 
+  const quantityNameType = isEngineer
+    ? intl.formatMessage(commonMessages.quantityHours)
+    : intl.formatMessage(commonMessages.quantity);
+
   return (
     <TextField
       name="quantity"
       type="number"
-      label={intl.formatMessage(commonMessages.quantity)}
+      label={quantityNameType}
       min="1"
       value={quantity.toString()}
       disabled={disabled}
       onChange={handleQuantityChange}
       errors={quantityErrors}
       data-test={testingContext}
-      data-testId={testingContextId}
+      data-testid={testingContextId}
     />
   );
 };

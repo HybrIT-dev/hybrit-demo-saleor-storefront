@@ -1,7 +1,7 @@
 import "./scss/index.scss";
 
 import * as React from "react";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { commonMessages } from "@temp/intl";
 import { IFilterAttributes, IFilters } from "@types";
@@ -86,6 +86,10 @@ const Page: React.FC<PageProps> = ({
       []
     );
 
+  const isDevopsEngineer = extractBreadcrumbs(category)[1].value === "DevOps";
+  const isSoftwareEngineer =
+    extractBreadcrumbs(category)[1].value === "Software Engineering";
+
   return (
     <div className="category">
       <div className="container">
@@ -108,6 +112,13 @@ const Page: React.FC<PageProps> = ({
           onChange={onOrder}
           onCloseFilterAttribute={onAttributeFiltersChange}
         />
+        <h2>
+          {isDevopsEngineer ? (
+            <FormattedMessage defaultMessage="Deze DevOps engineers hebben we voor je klaar staan!" />
+          ) : isSoftwareEngineer ? (
+            <FormattedMessage defaultMessage="Deze Software Engineers hebben we voor je klaar staan!" />
+          ) : null}
+        </h2>
         {canDisplayProducts && (
           <ProductList
             products={products.edges.map(edge => edge.node)}
