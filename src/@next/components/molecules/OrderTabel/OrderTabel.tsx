@@ -15,18 +15,18 @@ import { IProps } from "./types";
 const header = (matches: boolean) => (
   <S.HeaderRow>
     <S.IndexNumber>
-      <FormattedMessage defaultMessage="Index Number" />
+      <FormattedMessage defaultMessage="Index Nummer" />
     </S.IndexNumber>
     {matches && (
       <>
         <S.ProductsOrdered>
-          <FormattedMessage defaultMessage="Products Ordered" />
+          <FormattedMessage defaultMessage="Bestelde Producten" />
         </S.ProductsOrdered>
         <S.DateOfOrder>
-          <FormattedMessage defaultMessage="Date of Order" />
+          <FormattedMessage defaultMessage="Besteldatum" />
         </S.DateOfOrder>
         <S.Value>
-          <FormattedMessage defaultMessage="Value" />
+          <FormattedMessage defaultMessage="Bedrag" />
         </S.Value>
       </>
     )}
@@ -67,16 +67,16 @@ export const OrderTabel: React.FC<IProps> = ({ orders, history }: IProps) => {
                       {matches ? (
                         <>
                           <S.ProductsOrdered>
-                            {order.node.lines.slice(0, 5).map((product: any) =>
+                            {order?.node.lines.slice(0, 5).map((product: any) =>
                               product ? (
                                 <span
-                                  key={product.variant.product.id}
+                                  key={product.variant?.product.id}
                                   onClick={evt => {
                                     evt.stopPropagation();
                                     history.push(
                                       generateProductUrl(
-                                        product.variant.product.id,
-                                        product.variant.product.name
+                                        product.variant?.product.id,
+                                        product.variant?.product.name
                                       )
                                     );
                                   }}
