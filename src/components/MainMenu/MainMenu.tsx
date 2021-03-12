@@ -17,6 +17,7 @@ import {
   OverlayContext,
   OverlayTheme,
   OverlayType,
+  SelectField,
 } from "..";
 import * as appPaths from "../../app/routes";
 import { maybe } from "../../core/utils";
@@ -234,6 +235,22 @@ const MainMenu: React.FC<MainMenuProps> = ({ demoMode }) => {
                 query={{ minWidth: smallScreen }}
                 render={() => (
                   <>
+                    <li>
+                      <SelectField
+                        styles={{
+                          control: base => ({
+                            ...base,
+                            border: 0,
+                            boxShadow: "none",
+                          }),
+                        }}
+                        options={[
+                          { label: "EN", value: "en" },
+                          { label: "NL", value: "nl" },
+                        ]}
+                        defaultValue={{ label: "EN", value: "en" }}
+                      />
+                    </li>
                     {user ? (
                       <MenuDropdown
                         head={

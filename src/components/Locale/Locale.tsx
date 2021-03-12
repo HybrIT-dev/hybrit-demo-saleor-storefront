@@ -45,6 +45,8 @@ import locale_VI from "@locale/vi.json";
 import locale_ZH_HANS from "@locale/zh-Hans.json";
 import locale_ZH_HANT from "@locale/zh-Hant.json";
 
+import { useLocale } from "../../hooks";
+
 export enum Locale {
   EN = "en",
   PL = "pl",
@@ -208,8 +210,7 @@ function getKeyValueJson(messages: LocaleMessages): Record<string, string> {
 const defaultLocale = Locale.EN;
 
 const LocaleProvider: React.FC = ({ children }) => {
-  // For now locale can be set here
-  const locale = Locale.EN;
+  const { locale } = useLocale();
 
   return (
     <IntlProvider
