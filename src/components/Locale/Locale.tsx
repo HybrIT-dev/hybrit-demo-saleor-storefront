@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
 
 import locale_AR from "@locale/ar.json";
@@ -44,8 +44,6 @@ import locale_UK from "@locale/uk.json";
 import locale_VI from "@locale/vi.json";
 import locale_ZH_HANS from "@locale/zh-Hans.json";
 import locale_ZH_HANT from "@locale/zh-Hant.json";
-
-import { useLocale } from "../../hooks";
 
 export enum Locale {
   EN = "en",
@@ -209,19 +207,23 @@ function getKeyValueJson(messages: LocaleMessages): Record<string, string> {
 
 const defaultLocale = Locale.EN;
 
+const LanguageContext = React.createContext(null);
+
 const LocaleProvider: React.FC = ({ children }) => {
-  const { locale } = useLocale();
+  const [language, setLanguage] = useState<string>(defaultLocale);
 
   return (
-    <IntlProvider
-      defaultLocale={defaultLocale}
-      locale={locale}
-      messages={getKeyValueJson(localeData[locale])}
-      key={locale}
-    >
-      {children}
-    </IntlProvider>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      <IntlProvider
+        defaultLocale={defaultLocale}
+        locale={language}
+        messages={getKeyValueJson(localeData[language])}
+        key={language}
+      >
+        {children}
+      </IntlProvider>
+    </LanguageContext.Provider>
   );
 };
 
-export { LocaleProvider };
+export { LocaleProvider, LanguageContext };

@@ -10,6 +10,7 @@ import ReactSVG from "react-svg";
 import { DemoBanner } from "@components/atoms";
 import classNames from "classnames";
 import { channelSlug } from "@temp/constants";
+import { LanguageContext } from "../Locale";
 import {
   MenuDropdown,
   Offline,
@@ -35,6 +36,7 @@ import {
   smallScreen,
 } from "../../globalStyles/scss/variables.scss";
 import "./scss/index.scss";
+import { SelectValue } from "../SelectField";
 
 interface MainMenuProps {
   demoMode: boolean;
@@ -236,20 +238,29 @@ const MainMenu: React.FC<MainMenuProps> = ({ demoMode }) => {
                 render={() => (
                   <>
                     <li>
-                      <SelectField
-                        styles={{
-                          control: base => ({
-                            ...base,
-                            border: 0,
-                            boxShadow: "none",
-                          }),
-                        }}
-                        options={[
-                          { label: "EN", value: "en" },
-                          { label: "NL", value: "nl" },
-                        ]}
-                        defaultValue={{ label: "EN", value: "en" }}
-                      />
+                      <LanguageContext.Consumer>
+                        {({ language, setLanguage }) => (
+                          <SelectField
+                            onChange={e =>
+                              setLanguage((e as SelectValue).value as string)
+                            }
+                            styles={{
+                              control: base => ({
+                                ...base,
+                                border: 0,
+                                boxShadow: "none",
+                                minWidth: "80px",
+                              }),
+                            }}
+                            options={[
+                              { label: "EN", value: "en" },
+                              { label: "NL", value: "nl" },
+                              { label: "AR", value: "ar" },
+                            ]}
+                            defaultValue={{ label: "EN", value: "en" }}
+                          />
+                        )}
+                      </LanguageContext.Consumer>
                     </li>
                     {user ? (
                       <MenuDropdown
