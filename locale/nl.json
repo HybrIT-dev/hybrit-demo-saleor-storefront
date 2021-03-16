@@ -127,7 +127,7 @@
   },
   "@next_dot_components_dot_organisms_dot_AdyenPaymentGateway_dot_AdyenPaymentGateway_dot_adyenConfirmationErrorMessages_dot_cancelled": {
     "context": "Adyen payment gateway error",
-    "string": "Payment was cancelled."
+    "string": "Betaling is geannuleerd."
   },
   "@next_dot_components_dot_organisms_dot_AdyenPaymentGateway_dot_AdyenPaymentGateway_dot_adyenConfirmationErrorMessages_dot_error": {
     "context": "Adyen payment gateway error",
@@ -198,7 +198,7 @@
     "string": "Je bestelnummer is"
   },
   "@next_dot_components_dot_organisms_dot_ThankYou_dot_ThankYou_dot_3364990704": {
-    "string": "We’ve emailed you an order confirmation, and we’ll notify you when the order has been shipped."
+    "string": "We hebben u een orderbevestiging gestuurd en laten u weten wanneer de bestelling is verzonden."
   },
   "@next_dot_components_dot_organisms_dot_ThankYou_dot_ThankYou_dot_3752098833": {
     "string": "BESTEL DETAILS"
@@ -219,13 +219,13 @@
     "string": "Mijn Winkelwagen"
   },
   "@next_dot_pages_dot_CheckoutPage_dot_subpages_dot_CheckoutAddressSubpage_dot_2558335134": {
-    "string": "Please provide billing address."
+    "string": "Geef het factuuradres op."
   },
   "@next_dot_pages_dot_CheckoutPage_dot_subpages_dot_CheckoutAddressSubpage_dot_929802659": {
     "string": "Gelieve het verzendadres op te geven."
   },
   "@next_dot_pages_dot_OrdersHistory_dot_OrdersHistory_dot_1138265409": {
-    "string": "Load more"
+    "string": "Meer laden"
   },
   "account_dot_AddressBook_dot_AddressBook_dot_2776756156": {
     "string": "Bewerk adres"
@@ -331,7 +331,7 @@
     "string": "Nieuwe gebruiker is aangemaakt"
   },
   "components_dot_OverlayManager_dot_Login_dot_index_dot_282922692": {
-    "string": "Saleor account"
+    "string": "Hybrit account"
   },
   "components_dot_OverlayManager_dot_Login_dot_index_dot_3254057623": {
     "string": "Registreer Nieuw Account"
@@ -352,16 +352,16 @@
     "string": "Toon alle resultaten"
   },
   "components_dot_PasswordResetRequestForm_dot_index_dot_1587628595": {
-    "string": "Check your inbox"
+    "string": "Bekijk je inbox"
   },
   "components_dot_PasswordResetRequestForm_dot_index_dot_2925394684": {
     "string": "Wachtwoord resetten"
   },
   "components_dot_PasswordResetRequestForm_dot_index_dot_805890313": {
-    "string": "Please provide us your email address so we can share you a link to reset your password"
+    "string": "Geef ons uw e-mailadres zodat we u een link kunnen geven om uw wachtwoord opnieuw in te stellen"
   },
   "components_dot_Select_dot_SelectOptionsList_dot_1394135378": {
-    "string": "No Options"
+    "string": "Geen opties"
   },
   "intl_dot_checkoutMessages_dot_addNewAddress": {
     "string": "Nieuw adres toevoegen"
@@ -411,6 +411,21 @@
   "intl_dot_commonMessages_dot_account": {
     "string": "Account"
   },
+  "intl_dot_commonMessages_dot_myCart": {
+    "string": "Mijn winkelwagen"
+  },
+  "intl_dot_commonMessages_dot_continueShopping": {
+    "string": "Ga door met winkelen"
+  },
+  "intl_dot_commonMessages_dot_cartIsEmpty": {
+    "string": "Je winkelwagen is leeg"
+  },
+  "intl_dot_commonMessages_dot_cartIsEmptyExplanation": {
+    "string": "Je hebt niets aan je tas toegevoegd. We zijn er zeker van dat u iets in onze winkel zult vinden"
+  },
+  "intl_dot_commonMessages_dot_addToCart": {
+    "string": "Voeg toe aan winkelwagen"
+  },
   "intl_dot_commonMessages_dot_add": {
     "string": "Voeg toe"
   },
@@ -424,7 +439,7 @@
     "string": "Kassa"
   },
   "intl_dot_commonMessages_dot_choosePaymentMethod": {
-    "string": "Please choose payment method."
+    "string": "Kies een betalingsmethode."
   },
   "intl_dot_commonMessages_dot_clearFilterHeader": {
     "string": "FILTER VERWIJDEREN"
@@ -456,14 +471,17 @@
   "intl_dot_commonMessages_dot_maxQtyIs": {
     "string": "Maximale hoeveelheid is {maxQuantity}"
   },
+  "intl_dot_commonMessages_dot_quantityHours": {
+    "string": "Hoeveelheid uren"
+  },
   "intl_dot_commonMessages_dot_myAccount": {
     "string": "Mijn Account"
   },
   "intl_dot_commonMessages_dot_noItemsAvailable": {
-    "string": "No items available"
+    "string": "Geen items beschikbaar"
   },
   "intl_dot_commonMessages_dot_noPurchaseAvailable": {
-    "string": "Not available for purchase"
+    "string": "Niet te koop"
   },
   "intl_dot_commonMessages_dot_orderHistory": {
     "string": "Bestelgeschiedenis"
@@ -493,7 +511,7 @@
     "string": "Gelieve een e-mailadres op te geven."
   },
   "intl_dot_commonMessages_dot_purchaseAvailableOn": {
-    "string": "Will become available for purchase on {date} at {time}"
+    "string": "Komt beschikbaar voor aankoop op {date} om {time}"
   },
   "intl_dot_commonMessages_dot_qty": {
     "string": "Hoeveelheid"
@@ -535,46 +553,46 @@
     "string": "Productversie"
   },
   "intl_dot_commonMessages_dot_youMightLike": {
-    "string": "You might like"
+    "string": "Je houdt misschien van"
   },
   "intl_dot_orderStatusMessages_dot_canceled": {
-    "string": "Canceled"
+    "string": "Geannuleer"
   },
   "intl_dot_orderStatusMessages_dot_draft": {
     "string": "Conceptversie"
   },
   "intl_dot_orderStatusMessages_dot_fulfilled": {
-    "string": "Fulfilled"
+    "string": "Vervuld"
   },
   "intl_dot_orderStatusMessages_dot_partiallyFulfilled": {
-    "string": "Partially fulfilled"
+    "string": "Gedeeltelijk vervuld"
   },
   "intl_dot_orderStatusMessages_dot_unfulfilled": {
-    "string": "Unfulfilled"
+    "string": "Niet vervuld"
   },
   "intl_dot_paymentStatusMessages_dot_fullyCharged": {
-    "string": "Fully charged"
+    "string": "Volledig in rekening gebracht"
   },
   "intl_dot_paymentStatusMessages_dot_fullyRefunded": {
-    "string": "Fully refunded"
+    "string": "Volledig terugbetaald"
   },
   "intl_dot_paymentStatusMessages_dot_notCharged": {
-    "string": "Not charged"
+    "string": "Niet in rekening gebracht"
   },
   "intl_dot_paymentStatusMessages_dot_partiallyCharged": {
-    "string": "Partially charged"
+    "string": "Gedeeltelijk in rekening gebracht"
   },
   "intl_dot_paymentStatusMessages_dot_partiallyRefunded": {
-    "string": "Partially refunded"
+    "string": "Gedeeltelijk terugbetaald"
   },
   "intl_dot_prodListHeaderCommonMsg_dot_sortOptionsClear": {
-    "string": "Clear..."
+    "string": "Verwijder..."
   },
   "intl_dot_prodListHeaderCommonMsg_dot_sortOptionsName": {
-    "string": "Name Increasing"
+    "string": "Naam oplopend"
   },
   "intl_dot_prodListHeaderCommonMsg_dot_sortOptionsNameDsc": {
-    "string": "Name Decreasing"
+    "string": "Naam aflopend"
   },
   "intl_dot_prodListHeaderCommonMsg_dot_sortOptionsPrice": {
     "string": "Prijs laag-hoog"
@@ -583,17 +601,17 @@
     "string": "Prijs hoog-laag"
   },
   "intl_dot_prodListHeaderCommonMsg_dot_sortOptionsUpdatedAt": {
-    "string": "Last updated Ascending"
+    "string": "Laatst bijgewerkt oplopend"
   },
   "intl_dot_prodListHeaderCommonMsg_dot_sortOptionsUpdatedAtDsc": {
-    "string": "Last updated Descending"
+    "string": "Laatst bijgewerkt aflopend"
   },
   "userAccount_dot_views_dot_OrderDetails_dot_Page_dot_1857586798": {
-    "string": "Your order no.: {orderNum}"
+    "string": "Uw bestelnummer: {orderNum}"
   },
   "userAccount_dot_views_dot_OrderDetails_dot_Page_dot_2670827143": {
     "context": "action in popup menu in order view",
-    "string": "Download invoice"
+    "string": "Download factuur"
   },
   "userAccount_dot_views_dot_OrderDetails_dot_Page_dot_624688748": {
     "string": "Ga terug naar Bestelgeschiedenis"

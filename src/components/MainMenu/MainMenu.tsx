@@ -79,6 +79,11 @@ const MainMenu: React.FC<MainMenuProps> = ({ demoMode }) => {
     }
   };
 
+  const languageOptions = [
+    { label: "NL", value: "nl" },
+    { label: "EN", value: "en" },
+  ];
+
   return (
     <header
       className={classNames({
@@ -244,6 +249,9 @@ const MainMenu: React.FC<MainMenuProps> = ({ demoMode }) => {
                             onChange={e =>
                               setLanguage((e as SelectValue).value as string)
                             }
+                            value={languageOptions.find(
+                              option => option.value === language
+                            )}
                             styles={{
                               control: base => ({
                                 ...base,
@@ -252,11 +260,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ demoMode }) => {
                                 minWidth: "80px",
                               }),
                             }}
-                            options={[
-                              { label: "NL", value: "nl" },
-                              { label: "EN", value: "en" },
-                            ]}
-                            defaultValue={{ label: "NL", value: "nl" }}
+                            options={languageOptions}
                           />
                         )}
                       </LanguageContext.Consumer>

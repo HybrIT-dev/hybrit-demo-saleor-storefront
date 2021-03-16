@@ -1,5 +1,6 @@
 import React from "react";
-import { FormattedMessage } from "react-intl";
+import { useIntl, FormattedMessage } from "react-intl";
+import { commonMessages } from "@temp/intl";
 import ReactSVG from "react-svg";
 
 import {
@@ -93,6 +94,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
   proceedToCheckout,
 }: ICartSidebar) => {
   const { online } = useNetworkStatus();
+  const intl = useIntl();
 
   const { setElementRef } = useHandlerWhenClickedOutside(() => {
     hide();
@@ -113,9 +115,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
     >
       <S.Wrapper ref={setElementRef()}>
         <CardHeader divider onHide={hide} prefix={<ReactSVG path={cartImg} />}>
-          <span>
-            <FormattedMessage defaultMessage="Mijn winkelwagen" />
-          </span>
+          <span>{intl.formatMessage(commonMessages.myCart)}</span>
         </CardHeader>
         <S.Content>
           {!online ? (
@@ -131,16 +131,10 @@ const CartSidebar: React.FC<ICartSidebar> = ({
           ) : (
             <S.EmptyCart>
               <S.EmptyCartTitle>
-                <FormattedMessage
-                  defaultMessage="Uw winkelwagen is leeg"
-                  description="cart sidebar title"
-                />
+                {intl.formatMessage(commonMessages.cartIsEmpty)}
               </S.EmptyCartTitle>
               <S.EmptyCartDescription>
-                <FormattedMessage
-                  defaultMessage="Je hebt niets aan je tas toegevoegd. We zijn er zeker van dat u iets in onze winkel zult vinden"
-                  description="cart sidebar description"
-                />
+                {intl.formatMessage(commonMessages.cartIsEmptyExplanation)}
               </S.EmptyCartDescription>
               <Button
                 name="continueShopping"
@@ -149,10 +143,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
                 fullWidth
                 onClick={continueShopping}
               >
-                <FormattedMessage
-                  defaultMessage="Doorgaan met winkelen"
-                  description="button"
-                />
+                {intl.formatMessage(commonMessages.continueShopping)}
               </Button>
             </S.EmptyCart>
           )}
