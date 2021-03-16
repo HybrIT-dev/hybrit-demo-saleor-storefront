@@ -253,11 +253,10 @@ const MainMenu: React.FC<MainMenuProps> = ({ demoMode }) => {
                               }),
                             }}
                             options={[
-                              { label: "EN", value: "en" },
                               { label: "NL", value: "nl" },
-                              { label: "AR", value: "ar" },
+                              { label: "EN", value: "en" },
                             ]}
-                            defaultValue={{ label: "EN", value: "en" }}
+                            defaultValue={{ label: "NL", value: "nl" }}
                           />
                         )}
                       </LanguageContext.Consumer>
