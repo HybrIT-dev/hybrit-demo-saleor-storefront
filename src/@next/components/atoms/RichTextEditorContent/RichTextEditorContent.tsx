@@ -3,6 +3,11 @@ import EditorJS, {
   ToolConstructable,
   ToolSettings,
 } from "@editorjs/editorjs";
+
+import { useIntl } from "react-intl";
+import { hybritProductDescriptions } from "@utils/misc";
+import { commonMessages } from "@temp/intl";
+
 import Header from "@editorjs/header";
 import List from "@editorjs/list";
 import Quote from "@editorjs/quote";
@@ -41,10 +46,28 @@ export const RichTextEditorContent: React.FC<RichTextEditorContentProps> = ({
   const editor = React.useRef<EditorJS>();
   const editorContainer = React.useRef<HTMLDivElement>(null);
 
-  const data: OutputData = JSON.parse(jsonData);
+  const intl = useIntl();
+
+  const oldData: OutputData = JSON.parse(jsonData);
+
+  const { text } = oldData.blocks[0].data;
+
+  const newText =
+    text === hybritProductDescriptions.FS_BACKEND_DEV
+      ? intl.formatMessage(commonMessages.HybritFsBackEndDev)
+      : text === hybritProductDescriptions.FS_FRONTEND_DEV
+      ? intl.formatMessage(commonMessages.HybritFsFrontEndDev)
+      : text === hybritProductDescriptions.INTEG_DEV
+      ? intl.formatMessage(commonMessages.IntegrationDev)
+      : oldData.blocks[0].data.text;
+
+  const data = {
+    ...oldData,
+    blocks: [{ data: { text: newText }, type: "paragraph" }],
+  };
 
   React.useEffect(() => {
-    if (data && editorContainer.current) {
+    if (oldData && editorContainer.current) {
       editor.current = new EditorJS({
         data,
         holder: editorContainer.current,

@@ -1,11 +1,11 @@
 import classNames from "classnames";
 import * as React from "react";
-import { FormattedMessage } from "react-intl";
+import { useIntl, FormattedMessage } from "react-intl";
 import Media from "react-media";
 import { Link } from "react-router-dom";
 import { commonMessages } from "@temp/intl";
 
-import { translateCategory } from "@utils/misc";
+import { hybritMainMenuItems } from "@utils/misc";
 import { baseUrl } from "../../app/routes";
 import { getDBIdFromGraphqlId, slugify } from "../../core/utils";
 import { Category_category } from "../../views/Category/gqlTypes/Category";
@@ -44,42 +44,52 @@ const getBackLink = (breadcrumbs: Breadcrumb[]) =>
 
 const Breadcrumbs: React.FC<{
   breadcrumbs: Breadcrumb[];
-}> = ({ breadcrumbs }) => (
-  <Media
-    query={{
-      minWidth: smallScreen,
-    }}
-  >
-    {matches =>
-      matches ? (
-        <ul className="breadcrumbs">
-          <li>
-            <Link to={baseUrl}>
-              <FormattedMessage {...commonMessages.home} />
-            </Link>
-          </li>
-          {breadcrumbs.map((breadcrumb, index) => (
-            <li
-              key={breadcrumb.value}
-              className={classNames({
-                breadcrumbs__active: index === breadcrumbs.length - 1,
-              })}
-            >
-              <Link to={breadcrumb.link}>
-                {translateCategory(breadcrumb.value)}
+}> = ({ breadcrumbs }) => {
+  const intl = useIntl();
+  return (
+    <>
+      <Media
+        query={{
+          minWidth: smallScreen,
+        }}
+      >
+        {matches =>
+          matches ? (
+            <ul className="breadcrumbs">
+              <li>
+                <Link to={baseUrl}>
+                  <FormattedMessage {...commonMessages.home} />
+                </Link>
+              </li>
+              {breadcrumbs.map((breadcrumb, index) => (
+                <li
+                  key={breadcrumb.value}
+                  className={classNames({
+                    breadcrumbs__active: index === breadcrumbs.length - 1,
+                  })}
+                >
+                  <Link to={breadcrumb.link}>
+                    {breadcrumb.value === hybritMainMenuItems.HYBRIT_COLLECTIE
+                      ? intl.formatMessage(commonMessages.hybritCollection)
+                      : breadcrumb.value ===
+                        hybritMainMenuItems.HYBRIT_OFFICE_GADGETS
+                      ? intl.formatMessage(commonMessages.hybritOfficeGadgets)
+                      : breadcrumb.value}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="breadcrumbs">
+              <Link to={getBackLink(breadcrumbs)}>
+                {intl.formatMessage(commonMessages.back)}
               </Link>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <div className="breadcrumbs">
-          <Link to={getBackLink(breadcrumbs)}>
-            <FormattedMessage defaultMessage="Terug" />
-          </Link>
-        </div>
-      )
-    }
-  </Media>
-);
+            </div>
+          )
+        }
+      </Media>
+    </>
+  );
+};
 
 export default Breadcrumbs;

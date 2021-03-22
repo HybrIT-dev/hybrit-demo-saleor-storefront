@@ -1,5 +1,5 @@
 import React from "react";
-import { useIntl, FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 import { commonMessages } from "@temp/intl";
 import ReactSVG from "react-svg";
 
@@ -163,10 +163,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
               fullWidth
               onClick={goToCart}
             >
-              <FormattedMessage
-                defaultMessage="Ga naar mijn winkelwagen"
-                description="button"
-              />
+              {intl.formatMessage(commonMessages.gotoCart)}
             </Button>
             <Button
               name="gotoCheckout"
@@ -175,10 +172,7 @@ const CartSidebar: React.FC<ICartSidebar> = ({
               fullWidth
               onClick={proceedToCheckout}
             >
-              <FormattedMessage
-                defaultMessage="Ga naar de kassa"
-                description="button"
-              />
+              {intl.formatMessage(commonMessages.gotoCheckout)}
             </Button>
           </S.Footer>
         )}

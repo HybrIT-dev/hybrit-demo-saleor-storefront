@@ -1,8 +1,59 @@
 import { defineMessages, IntlShape } from "react-intl";
 
 export const commonMessages = defineMessages({
+  HybritFsBackEndDev: {
+    defaultMessage:
+      "Whether your team can use extra development capacity, needs help with setting up CI / CD or wants advice on architecture: HybrIT is happy to help your team move forward. We employ experienced software developers who can be hired on an hourly basis. Developers who are in daily contact with our development team. In fact, you get access to all the expertise we have in-house, even if you only hire one developer. And we pay a fair rate in return",
+  },
+  HybritFsFrontEndDev: {
+    defaultMessage:
+      "Whether your team can use extra development capacity, needs help with setting up CI / CD or wants advice on architecture: HybrIT is happy to help your team move forward. We employ experienced software developers who can be hired on an hourly basis. Developers who are in daily contact with our development team. In fact, you get access to all the expertise we have in-house, even if you only hire one developer. And we pay a fair rate in return",
+  },
+  IntegrationDev: {
+    defaultMessage:
+      "Whether your team can use extra development capacity, needs help with setting up CI / CD or wants advice on architecture: HybrIT is happy to help your team move forward. We employ experienced software developers who can be hired on an hourly basis. Developers who are in daily contact with our development team. In fact, you get access to all the expertise we have in-house, even if you only hire one developer. And we pay a fair rate in return",
+  },
+  hybritCollection: {
+    defaultMessage: "Hybrit collection",
+  },
+  hybritOfficeGadgets: {
+    defaultMessage: "Hybrit Office Gadgets",
+  },
+  back: {
+    defaultMessage: "Back",
+  },
+  theseDevopsEngineers: {
+    defaultMessage: "We have these DevOps engineers ready for you!",
+  },
+  theseSoftwareEngineers: {
+    defaultMessage: "We have these Software engineers ready for you!",
+  },
+  groceries: {
+    defaultMessage: "Groceries",
+  },
+  drinks: {
+    defaultMessage: "Drinks",
+  },
+  office: {
+    defaultMessage: "Office",
+  },
+  kitchen: {
+    defaultMessage: "Kitchen",
+  },
   myCart: {
     defaultMessage: "My Cart",
+  },
+  otherProducts: {
+    defaultMessage: "Other products in this category",
+  },
+  shopByCategory: {
+    defaultMessage: "SHOP BY CATEGORY",
+  },
+  seeOurServices: {
+    defaultMessage: "Our services",
+  },
+  highlighted: {
+    defaultMessage: "Highlighted",
   },
   addToCart: {
     defaultMessage: "Add to cart",
@@ -16,6 +67,12 @@ export const commonMessages = defineMessages({
   },
   continueShopping: {
     defaultMessage: "Continue shopping",
+  },
+  gotoCart: {
+    defaultMessage: "Go to my cart",
+  },
+  gotoCheckout: {
+    defaultMessage: "Go to checkout",
   },
   search: {
     defaultMessage: "Search",
@@ -72,7 +129,7 @@ export const commonMessages = defineMessages({
     defaultMessage: "Quantity",
   },
   quantityHours: {
-    defaultMessage: "Amount Of Hours",
+    defaultMessage: "Hours",
   },
   sku: {
     defaultMessage: "SKU",

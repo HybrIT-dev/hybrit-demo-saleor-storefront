@@ -366,6 +366,24 @@
   "intl_dot_checkoutMessages_dot_addNewAddress": {
     "string": "Nieuw adres toevoegen"
   },
+  "intl_dot_commonMessages_dot_back": {
+    "string": "Terug"
+  },
+  "intl_dot_commonMessages_dot_HybritFsBackEndDev": {
+    "string": "Of je team nu extra development capaciteit kan gebruiken, hulp nodig heeft bij de opzet van CI/CD of advies wil over architectuur: HybrIT helpt je team graag vooruit. Wij hebben ervaren software developers in dienst die op uurbasis ingehuurd kunnen worden. Developers die dagelijks in contact staan met ons development team. Zo krijg je in feite beschikking over alle expertise die we in huis hebben, ook als je maar één developer inhuurt. En daar zetten wij een eerlijk tarief tegenover"
+  },
+  "intl_dot_commonMessages_dot_HybritFsFrontEndDev": {
+    "string": "Of je team nu extra development capaciteit kan gebruiken, hulp nodig heeft bij de opzet van CI/CD of advies wil over architectuur: HybrIT helpt je team graag vooruit. Wij hebben ervaren software developers in dienst die op uurbasis ingehuurd kunnen worden. Developers die dagelijks in contact staan met ons development team. Zo krijg je in feite beschikking over alle expertise die we in huis hebben, ook als je maar één developer inhuurt. En daar zetten wij een eerlijk tarief tegenover"
+  },
+  "intl_dot_commonMessages_dot_IntegrationDev": {
+    "string": "Of je team nu extra development capaciteit kan gebruiken, hulp nodig heeft bij de opzet van CI/CD of advies wil over architectuur: HybrIT helpt je team graag vooruit. Wij hebben ervaren software developers in dienst die op uurbasis ingehuurd kunnen worden. Developers die dagelijks in contact staan met ons development team. Zo krijg je in feite beschikking over alle expertise die we in huis hebben, ook als je maar één developer inhuurt. En daar zetten wij een eerlijk tarief tegenover"
+  },
+  "intl_dot_commonMessages_dot_hybritCollection": {
+    "string": "Hybrit collectie"
+  },
+  "intl_dot_commonMessages_dot_hybritOfficeGadgets": {
+    "string": "Hybrit Kantoor Spullen"
+  },
   "intl_dot_checkoutMessages_dot_addressNextActionName": {
     "string": "Ga verder naar Verzending"
   },
@@ -426,6 +444,12 @@
   "intl_dot_commonMessages_dot_addToCart": {
     "string": "Voeg toe aan winkelwagen"
   },
+  "intl_dot_commonMessages_dot_gotoCart": {
+    "string": "Ga naar mijn winkelwagen"
+  },
+  "intl_dot_commonMessages_dot_gotoCheckout": {
+    "string": "Ga naar de kassa"
+  },
   "intl_dot_commonMessages_dot_add": {
     "string": "Voeg toe"
   },
@@ -472,7 +496,7 @@
     "string": "Maximale hoeveelheid is {maxQuantity}"
   },
   "intl_dot_commonMessages_dot_quantityHours": {
-    "string": "Hoeveelheid uren"
+    "string": "Uren"
   },
   "intl_dot_commonMessages_dot_myAccount": {
     "string": "Mijn Account"
@@ -489,6 +513,9 @@
   "intl_dot_commonMessages_dot_outOfStock": {
     "string": "Geen stock meer"
   },
+  "intl_dot_commonMessages_dot_highlighted": {
+    "string": "Uitgelicht"
+  },
   "intl_dot_commonMessages_dot_password": {
     "string": "Wachtwoord"
   },
@@ -503,6 +530,33 @@
   },
   "intl_dot_commonMessages_dot_products": {
     "string": "Producten"
+  },
+  "intl_dot_commonMessages_dot_theseDevopsEngineers": {
+    "string": "Deze DevOps engineers hebben we voor je klaar staan!"
+  },
+  "intl_dot_commonMessages_dot_theseSoftwareEngineers": {
+    "string": "Deze Software engineers hebben we voor je klaar staan!"
+  },
+  "intl_dot_commonMessages_dot_otherProducts": {
+    "string": "Andere producten in deze categorie"
+  },
+  "intl_dot_commonMessages_dot_groceries": {
+    "string": "Voedingswaren"
+  },
+  "intl_dot_commonMessages_dot_drinks": {
+    "string": "Drankjes"
+  },
+  "intl_dot_commonMessages_dot_office": {
+    "string": "Kantoor"
+  },
+  "intl_dot_commonMessages_dot_kitchen": {
+    "string": "Keuken"
+  },
+  "intl_dot_commonMessages_dot_shopByCategory": {
+    "string": "WINKELEN PER CATEGORIE"
+  },
+  "intl_dot_commonMessages_dot_seeOurServices": {
+    "string": "Bekijk Onze Diensten"
   },
   "intl_dot_commonMessages_dot_promoCode": {
     "string": "Promo code"

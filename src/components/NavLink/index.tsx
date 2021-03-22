@@ -1,6 +1,9 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { useIntl } from "react-intl";
+import { commonMessages } from "@temp/intl";
 
+import { hybritMainMenuItems } from "@utils/misc";
 import {
   generateCategoryUrl,
   generateCollectionUrl,
@@ -21,10 +24,19 @@ interface NavLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     | SecondaryMenu_menu_items_children;
 }
 export const NavLink: React.FC<NavLinkProps> = ({ item, ...props }) => {
+  const intl = useIntl();
   const { name, url, category, collection, page } = item;
   const link = (url: string) => (
     <Link to={url} {...props}>
-      {name}
+      {name === hybritMainMenuItems.HYBRIT_COLLECTION
+        ? intl.formatMessage(commonMessages.hybritCollection)
+        : name === hybritMainMenuItems.DRANKJES
+        ? intl.formatMessage(commonMessages.drinks)
+        : name === hybritMainMenuItems.KANTOOR
+        ? intl.formatMessage(commonMessages.office)
+        : name === hybritMainMenuItems.KEUKEN
+        ? intl.formatMessage(commonMessages.kitchen)
+        : name}
     </Link>
   );
 

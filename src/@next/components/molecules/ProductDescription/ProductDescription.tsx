@@ -17,7 +17,7 @@ export const ProductDescription: React.FC<IProps> = ({
   attributes,
 }: IProps) => {
   const [activeTab, setActiveTab] = React.useState<TABS>(TABS.DESCRIPTION);
-
+  // const intl = useIntl();
   return (
     <S.Wrapper>
       <S.Tabs>
@@ -48,6 +48,7 @@ export const ProductDescription: React.FC<IProps> = ({
           <FormattedMessage defaultMessage="ATTRIBUTES" />
         </S.TabTitle>
       </S.Tabs>
+
       <div hidden={activeTab !== TABS.DESCRIPTION}>
         {descriptionJson ? (
           <RichTextEditorContent jsonData={descriptionJson} />
@@ -55,6 +56,7 @@ export const ProductDescription: React.FC<IProps> = ({
           <p>{description}</p>
         )}
       </div>
+
       <div hidden={activeTab !== TABS.ATTRIBUTES}>
         <S.AttributeList>
           {attributes &&

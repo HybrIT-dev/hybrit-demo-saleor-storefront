@@ -1,7 +1,7 @@
 import "./scss/index.scss";
 
 import * as React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 
 import { commonMessages } from "@temp/intl";
 import { IFilterAttributes, IFilters } from "@types";
@@ -113,11 +113,11 @@ const Page: React.FC<PageProps> = ({
           onCloseFilterAttribute={onAttributeFiltersChange}
         />
         <h2>
-          {isDevopsEngineer ? (
-            <FormattedMessage defaultMessage="Deze DevOps engineers hebben we voor je klaar staan!" />
-          ) : isSoftwareEngineer ? (
-            <FormattedMessage defaultMessage="Deze Software Engineers hebben we voor je klaar staan!" />
-          ) : null}
+          {isDevopsEngineer
+            ? intl.formatMessage(commonMessages.theseDevopsEngineers)
+            : isSoftwareEngineer
+            ? intl.formatMessage(commonMessages.theseSoftwareEngineers)
+            : null}
         </h2>
         {canDisplayProducts && (
           <ProductList
