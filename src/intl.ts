@@ -1,6 +1,25 @@
 import { defineMessages, IntlShape } from "react-intl";
 
 export const commonMessages = defineMessages({
+  hybritPen: {
+    defaultMessage: "Hybrit Pen",
+  },
+  hybritExtSSD: {
+    defaultMessage: "Hybrit External SSD",
+  },
+  hybritSaltLamp: {
+    defaultMessage: "Hybrit Salt Lamp",
+  },
+  hybritCoffeeCup: {
+    defaultMessage: "Hybrit Coffee Cup",
+  },
+  hybritBeer: {
+    defaultMessage: "Hybrit Beer",
+  },
+  hybritGingerBeer: {
+    defaultMessage: "Hybrit Ginger Beer",
+  },
+
   HybritFsBackEndDev: {
     defaultMessage:
       "Whether your team can use extra development capacity, needs help with setting up CI / CD or wants advice on architecture: HybrIT is happy to help your team move forward. We employ experienced software developers who can be hired on an hourly basis. Developers who are in daily contact with our development team. In fact, you get access to all the expertise we have in-house, even if you only hire one developer. And we pay a fair rate in return",
@@ -19,8 +38,17 @@ export const commonMessages = defineMessages({
   hybritOfficeGadgets: {
     defaultMessage: "Hybrit Office Gadgets",
   },
+  hybritKitchen: {
+    defaultMessage: "Hybrit Kitchen",
+  },
+  hybritDrinks: {
+    defaultMessage: "Hybrit Drinks",
+  },
   back: {
     defaultMessage: "Back",
+  },
+  moreButton: {
+    defaultMessage: "More +",
   },
   theseDevopsEngineers: {
     defaultMessage: "We have these DevOps engineers ready for you!",

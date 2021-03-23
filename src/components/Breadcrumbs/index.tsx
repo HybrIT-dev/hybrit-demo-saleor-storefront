@@ -5,7 +5,7 @@ import Media from "react-media";
 import { Link } from "react-router-dom";
 import { commonMessages } from "@temp/intl";
 
-import { hybritMainMenuItems } from "@utils/misc";
+import { translateHybritBreadcrumbs } from "@utils/misc";
 import { baseUrl } from "../../app/routes";
 import { getDBIdFromGraphqlId, slugify } from "../../core/utils";
 import { Category_category } from "../../views/Category/gqlTypes/Category";
@@ -69,12 +69,13 @@ const Breadcrumbs: React.FC<{
                   })}
                 >
                   <Link to={breadcrumb.link}>
-                    {breadcrumb.value === hybritMainMenuItems.HYBRIT_COLLECTIE
-                      ? intl.formatMessage(commonMessages.hybritCollection)
-                      : breadcrumb.value ===
-                        hybritMainMenuItems.HYBRIT_OFFICE_GADGETS
-                      ? intl.formatMessage(commonMessages.hybritOfficeGadgets)
-                      : breadcrumb.value}
+                    {
+                      translateHybritBreadcrumbs(
+                        breadcrumb.value,
+                        intl,
+                        commonMessages
+                      ) as any
+                    }
                   </Link>
                 </li>
               ))}

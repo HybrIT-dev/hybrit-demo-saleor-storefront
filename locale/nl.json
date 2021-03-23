@@ -363,11 +363,32 @@
   "components_dot_Select_dot_SelectOptionsList_dot_1394135378": {
     "string": "Geen opties"
   },
+  "intl_dot_commonMessages_dot_hybritPen": {
+    "string": "HybrIT Balpen"
+  },
+  "intl_dot_commonMessages_dot_hybritExtSSD": {
+    "string": "HybrIT External SSD"
+  },
+  "intl_dot_commonMessages_dot_hybritSaltLamp": {
+    "string": "Hybrit Himalaya Zoutlamp"
+  },
+  "intl_dot_commonMessages_dot_hybritCoffeeCup": {
+    "string": "Hybrit Koffiekopje"
+  },
+  "intl_dot_commonMessages_dot_hybritBeer": {
+    "string": "Hybrit Bier"
+  },
+  "intl_dot_commonMessages_dot_hybritGingerBeer": {
+    "string": "Hybrit Gember Bier"
+  },
   "intl_dot_checkoutMessages_dot_addNewAddress": {
     "string": "Nieuw adres toevoegen"
   },
   "intl_dot_commonMessages_dot_back": {
     "string": "Terug"
+  },
+  "intl_dot_commonMessages_dot_moreButton": {
+    "string": "Meer +"
   },
   "intl_dot_commonMessages_dot_HybritFsBackEndDev": {
     "string": "Of je team nu extra development capaciteit kan gebruiken, hulp nodig heeft bij de opzet van CI/CD of advies wil over architectuur: HybrIT helpt je team graag vooruit. Wij hebben ervaren software developers in dienst die op uurbasis ingehuurd kunnen worden. Developers die dagelijks in contact staan met ons development team. Zo krijg je in feite beschikking over alle expertise die we in huis hebben, ook als je maar één developer inhuurt. En daar zetten wij een eerlijk tarief tegenover"
@@ -377,6 +398,12 @@
   },
   "intl_dot_commonMessages_dot_IntegrationDev": {
     "string": "Of je team nu extra development capaciteit kan gebruiken, hulp nodig heeft bij de opzet van CI/CD of advies wil over architectuur: HybrIT helpt je team graag vooruit. Wij hebben ervaren software developers in dienst die op uurbasis ingehuurd kunnen worden. Developers die dagelijks in contact staan met ons development team. Zo krijg je in feite beschikking over alle expertise die we in huis hebben, ook als je maar één developer inhuurt. En daar zetten wij een eerlijk tarief tegenover"
+  },
+  "intl_dot_commonMessages_dot_hybritKitchen": {
+    "string": "Hybrit Keuken"
+  },
+  "intl_dot_commonMessages_dot_hybritDrinks": {
+    "string": "Hybrit Drankjes"
   },
   "intl_dot_commonMessages_dot_hybritCollection": {
     "string": "Hybrit collectie"

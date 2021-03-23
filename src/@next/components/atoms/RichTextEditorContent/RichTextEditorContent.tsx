@@ -5,8 +5,8 @@ import EditorJS, {
 } from "@editorjs/editorjs";
 
 import { useIntl } from "react-intl";
-import { hybritProductDescriptions } from "@utils/misc";
 import { commonMessages } from "@temp/intl";
+import { hybritProductDescriptions } from "@utils/misc";
 
 import Header from "@editorjs/header";
 import List from "@editorjs/list";

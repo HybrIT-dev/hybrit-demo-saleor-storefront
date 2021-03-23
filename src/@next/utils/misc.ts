@@ -22,10 +22,60 @@ export const translateCategory = (name: string) => {
   }
 };
 
+export function translateHybritProduct(
+  name: string,
+  intl?: any,
+  commonMessages?: any
+) {
+  switch (name) {
+    case "HybrIT Balpen":
+      return intl.formatMessage(commonMessages.hybritPen);
+
+    case "HybrIT External SSD":
+      return intl.formatMessage(commonMessages.hybritExtSSD);
+
+    case "hybrit himalaya zoutlamp":
+      return intl.formatMessage(commonMessages.hybritSaltLamp);
+
+    case "HybrIT Koffiekopje":
+      return intl.formatMessage(commonMessages.hybritCoffeeCup);
+
+    case "HybrIT Bier":
+      return intl.formatMessage(commonMessages.hybritBeer);
+
+    case "HybrIT Gember Bier":
+      return intl.formatMessage(commonMessages.hybritGingerBeer);
+
+    default:
+      return name;
+  }
+}
+
+export function translateHybritBreadcrumbs(
+  value: string,
+  intl: any,
+  commonMessages: any
+) {
+  switch (value) {
+    case hybritMainMenuItems.HYBRIT_COLLECTIE:
+      return intl.formatMessage(commonMessages.hybritCollection);
+    case hybritMainMenuItems.HYBRIT_OFFICE_GADGETS:
+      return intl.formatMessage(commonMessages.hybritOfficeGadgets);
+    case hybritMainMenuItems.HYBRIT_KITCHEN:
+      return intl.formatMessage(commonMessages.hybritKitchen);
+    case hybritMainMenuItems.HYBRIT_DRINKS:
+      return intl.formatMessage(commonMessages.hybritDrinks);
+    default:
+      return translateHybritProduct(value, intl, commonMessages);
+  }
+}
+
 export const hybritMainMenuItems = {
   HYBRIT_COLLECTION: "HybrIT Collectie",
   HYBRIT_COLLECTIE: "HybrIT Collection",
   HYBRIT_OFFICE_GADGETS: "Hybrit Office Gadgets",
+  HYBRIT_KITCHEN: "HybrIT Kitchen",
+  HYBRIT_DRINKS: "HybrIT Drinks",
   DRANKJES: "Drankjes",
   KANTOOR: "Kantoor",
   KEUKEN: "Keuken",
