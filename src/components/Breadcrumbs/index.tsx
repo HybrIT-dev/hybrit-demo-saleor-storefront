@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import * as React from "react";
 import { useIntl, FormattedMessage } from "react-intl";
+import { commonMessages } from "@temp/intl";
 import Media from "react-media";
 import { Link } from "react-router-dom";
-import { commonMessages } from "@temp/intl";
 
 import { translateHybritBreadcrumbs } from "@utils/misc";
 import { baseUrl } from "../../app/routes";

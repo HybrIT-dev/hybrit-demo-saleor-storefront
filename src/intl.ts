@@ -4,8 +4,14 @@ export const commonMessages = defineMessages({
   hybritPen: {
     defaultMessage: "Hybrit Pen",
   },
+  hybritPenDescription: {
+    defaultMessage: "Handy HybrIT style ballpoint pen with storage pouch",
+  },
   hybritExtSSD: {
     defaultMessage: "Hybrit External SSD",
+  },
+  hybritExtSSDDescription: {
+    defaultMessage: "A super fast 512GB External SSD in HybrIT style orange",
   },
   hybritSaltLamp: {
     defaultMessage: "Hybrit Salt Lamp",
@@ -13,22 +19,33 @@ export const commonMessages = defineMessages({
   hybritCoffeeCup: {
     defaultMessage: "Hybrit Coffee Cup",
   },
+  hybritCoffeeCupDescription: {
+    defaultMessage: "A handy espresso cup in HybrIT style orange or black",
+  },
   hybritBeer: {
     defaultMessage: "Hybrit Beer",
+  },
+  hybritBeerDescription: {
+    defaultMessage:
+      "A golden lager produced in-house, straight from the HybrIT brewery",
   },
   hybritGingerBeer: {
     defaultMessage: "Hybrit Ginger Beer",
   },
+  hybritGingerBeerDescription: {
+    defaultMessage:
+      "With a touch of lemon and fresh ginger, straight from the HybrIT Brewery",
+  },
 
-  HybritFsBackEndDev: {
+  hybritFsBackEndDev: {
     defaultMessage:
       "Whether your team can use extra development capacity, needs help with setting up CI / CD or wants advice on architecture: HybrIT is happy to help your team move forward. We employ experienced software developers who can be hired on an hourly basis. Developers who are in daily contact with our development team. In fact, you get access to all the expertise we have in-house, even if you only hire one developer. And we pay a fair rate in return",
   },
-  HybritFsFrontEndDev: {
+  hybritFsFrontEndDev: {
     defaultMessage:
       "Whether your team can use extra development capacity, needs help with setting up CI / CD or wants advice on architecture: HybrIT is happy to help your team move forward. We employ experienced software developers who can be hired on an hourly basis. Developers who are in daily contact with our development team. In fact, you get access to all the expertise we have in-house, even if you only hire one developer. And we pay a fair rate in return",
   },
-  IntegrationDev: {
+  integrationDev: {
     defaultMessage:
       "Whether your team can use extra development capacity, needs help with setting up CI / CD or wants advice on architecture: HybrIT is happy to help your team move forward. We employ experienced software developers who can be hired on an hourly basis. Developers who are in daily contact with our development team. In fact, you get access to all the expertise we have in-house, even if you only hire one developer. And we pay a fair rate in return",
   },

@@ -52,14 +52,23 @@ export const RichTextEditorContent: React.FC<RichTextEditorContentProps> = ({
 
   const { text } = oldData.blocks[0].data;
 
-  const newText =
-    text === hybritProductDescriptions.FS_BACKEND_DEV
-      ? intl.formatMessage(commonMessages.HybritFsBackEndDev)
-      : text === hybritProductDescriptions.FS_FRONTEND_DEV
-      ? intl.formatMessage(commonMessages.HybritFsFrontEndDev)
-      : text === hybritProductDescriptions.INTEG_DEV
-      ? intl.formatMessage(commonMessages.IntegrationDev)
-      : oldData.blocks[0].data.text;
+  const newText = text?.includes(hybritProductDescriptions.FS_BACKEND_DEV)
+    ? intl.formatMessage(commonMessages.hybritFsBackEndDev)
+    : text?.includes(hybritProductDescriptions.FS_FRONTEND_DEV)
+    ? intl.formatMessage(commonMessages.hybritFsFrontEndDev)
+    : text?.includes(hybritProductDescriptions.INTEG_DEV)
+    ? intl.formatMessage(commonMessages.integrationDev)
+    : text?.includes(hybritProductDescriptions.HYBRIT_BEER)
+    ? intl.formatMessage(commonMessages.hybritBeerDescription)
+    : text?.includes(hybritProductDescriptions.HYBRIT_GINGER_BEER)
+    ? intl.formatMessage(commonMessages.hybritGingerBeerDescription)
+    : text?.includes(hybritProductDescriptions.HYBRIT_PEN)
+    ? intl.formatMessage(commonMessages.hybritPenDescription)
+    : text?.includes(hybritProductDescriptions.HYBRIT_SSD)
+    ? intl.formatMessage(commonMessages.hybritExtSSDDescription)
+    : text?.includes(hybritProductDescriptions.HYBRIT_CUP)
+    ? intl.formatMessage(commonMessages.hybritCoffeeCupDescription)
+    : text;
 
   const data = {
     ...oldData,

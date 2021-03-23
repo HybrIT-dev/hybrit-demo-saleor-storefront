@@ -366,8 +366,14 @@
   "intl_dot_commonMessages_dot_hybritPen": {
     "string": "HybrIT Balpen"
   },
+  "intl_dot_commonMessages_dot_hybritPenDescription": {
+    "string": "Handige HybrIT style balpen met opberg etui"
+  },
   "intl_dot_commonMessages_dot_hybritExtSSD": {
     "string": "HybrIT External SSD"
+  },
+  "intl_dot_commonMessages_dot_hybritExtSSDDescription": {
+    "string": "Een razendsnelle 512GB External SSD in HybrIT style oranje"
   },
   "intl_dot_commonMessages_dot_hybritSaltLamp": {
     "string": "Hybrit Himalaya Zoutlamp"
@@ -375,11 +381,20 @@
   "intl_dot_commonMessages_dot_hybritCoffeeCup": {
     "string": "Hybrit Koffiekopje"
   },
+  "intl_dot_commonMessages_dot_hybritCoffeeCupDescription": {
+    "string": "Een handig espresso kopje in HybrIT stijl oranje of zwart"
+  },
   "intl_dot_commonMessages_dot_hybritBeer": {
     "string": "Hybrit Bier"
   },
+  "intl_dot_commonMessages_dot_hybritBeerDescription": {
+    "string": "Een gouden pils van eigen hand, rechtstreeks uit de HybrIT brouwerij"
+  },
   "intl_dot_commonMessages_dot_hybritGingerBeer": {
     "string": "Hybrit Gember Bier"
+  },
+  "intl_dot_commonMessages_dot_hybritGingerBeerDescription": {
+    "string": "Met een vleugje citroen en verse gember, rechstreeks uit de HybrIT Brouwerij"
   },
   "intl_dot_checkoutMessages_dot_addNewAddress": {
     "string": "Nieuw adres toevoegen"
