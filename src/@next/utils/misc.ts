@@ -57,13 +57,13 @@ export function translateHybritBreadcrumbs(
   commonMessages: any
 ) {
   switch (value) {
-    case hybritMainMenuItems.HYBRIT_COLLECTIE:
+    case hybritMenuItems.HYBRIT_COLLECTIE:
       return intl.formatMessage(commonMessages.hybritCollection);
-    case hybritMainMenuItems.HYBRIT_OFFICE_GADGETS:
+    case hybritMenuItems.HYBRIT_OFFICE_GADGETS:
       return intl.formatMessage(commonMessages.hybritOfficeGadgets);
-    case hybritMainMenuItems.HYBRIT_KITCHEN:
+    case hybritMenuItems.HYBRIT_KITCHEN:
       return intl.formatMessage(commonMessages.hybritKitchen);
-    case hybritMainMenuItems.HYBRIT_DRINKS:
+    case hybritMenuItems.HYBRIT_DRINKS:
       return intl.formatMessage(commonMessages.hybritDrinks);
     default:
       return translateHybritProduct(value, intl, commonMessages);
@@ -92,7 +92,27 @@ export function translateHybritAttribute(
     : name;
 }
 
-export const hybritMainMenuItems = {
+export function translateMenuItems(name, intl, commonMessages) {
+  return name === hybritMenuItems.HYBRIT_COLLECTION
+    ? intl.formatMessage(commonMessages.hybritCollection)
+    : name === hybritMenuItems.DRANKJES
+    ? intl.formatMessage(commonMessages.drinks)
+    : name === hybritMenuItems.KANTOOR
+    ? intl.formatMessage(commonMessages.office)
+    : name === hybritMenuItems.KEUKEN
+    ? intl.formatMessage(commonMessages.kitchen)
+    : name === hybritMenuItems.COLLECTIONS
+    ? intl.formatMessage(commonMessages.collections)
+    : name === hybritMenuItems.HIGHLIGHTED_PRODUCTS
+    ? intl.formatMessage(commonMessages.highlightedProducts)
+    : name === hybritMenuItems.OFFERS
+    ? intl.formatMessage(commonMessages.offers)
+    : name === hybritMenuItems.ABOUT_US
+    ? intl.formatMessage(commonMessages.aboutUs)
+    : name;
+}
+
+export const hybritMenuItems = {
   COLLECTIONS: "Collecties",
   HIGHLIGHTED_PRODUCTS: "Uitgelichte producten",
   OFFERS: "Aanbiedingen",

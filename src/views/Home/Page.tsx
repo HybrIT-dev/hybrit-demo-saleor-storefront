@@ -5,7 +5,7 @@ import * as React from "react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
-import { hybritMainMenuItems } from "@utils/misc";
+import { hybritMenuItems } from "@utils/misc";
 import { commonMessages } from "@temp/intl";
 import { Button, Loader, ProductsFeatured } from "../../components";
 import { generateCategoryUrl } from "../../core/utils";
@@ -100,7 +100,7 @@ const Page: React.FC<{
                       }}
                     />
                     <h3>
-                      {category.name === hybritMainMenuItems.HYBRIT_COLLECTIE
+                      {category.name === hybritMenuItems.HYBRIT_COLLECTIE
                         ? intl.formatMessage(commonMessages.hybritCollection)
                         : category.name}
                     </h3>

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useIntl } from "react-intl";
 import { commonMessages } from "@temp/intl";
 
-import { hybritMainMenuItems } from "@utils/misc";
+import { translateMenuItems } from "src/@next/utils/misc";
+
 import {
   generateCategoryUrl,
   generateCollectionUrl,
@@ -28,23 +29,7 @@ export const NavLink: React.FC<NavLinkProps> = ({ item, ...props }) => {
   const { name, url, category, collection, page } = item;
   const link = (url: string) => (
     <Link to={url} {...props}>
-      {name === hybritMainMenuItems.HYBRIT_COLLECTION
-        ? intl.formatMessage(commonMessages.hybritCollection)
-        : name === hybritMainMenuItems.DRANKJES
-        ? intl.formatMessage(commonMessages.drinks)
-        : name === hybritMainMenuItems.KANTOOR
-        ? intl.formatMessage(commonMessages.office)
-        : name === hybritMainMenuItems.KEUKEN
-        ? intl.formatMessage(commonMessages.kitchen)
-        : name === hybritMainMenuItems.COLLECTIONS
-        ? intl.formatMessage(commonMessages.collections)
-        : name === hybritMainMenuItems.HIGHLIGHTED_PRODUCTS
-        ? intl.formatMessage(commonMessages.highlightedProducts)
-        : name === hybritMainMenuItems.OFFERS
-        ? intl.formatMessage(commonMessages.offers)
-        : name === hybritMainMenuItems.ABOUT_US
-        ? intl.formatMessage(commonMessages.aboutUs)
-        : name}
+      {translateMenuItems(name, intl, commonMessages)}
     </Link>
   );
 
