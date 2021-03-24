@@ -1,6 +1,20 @@
 import { defineMessages, IntlShape } from "react-intl";
 
 export const commonMessages = defineMessages({
+  hybritAboutP1: {
+    defaultMessage:
+      "We supply portals with standard APIs that can be linked to all larger ERP systems. Is customization necessary? Or do you want to add special features? We have all the knowledge to build and integrate portals exactly according to your wishes. We ensure that your new online company portal, with or without a mobile app, fully connects to your existing IT system and supports your company as much as possible.",
+  },
+  hybritAboutP2: {
+    defaultMessage:
+      "HybrIT makes your digital ambitions come true; from advice to implementation.",
+  },
+  hybritAboutP3: {
+    defaultMessage: "Contact HybrIT!",
+  },
+  hybritAboutHeader: {
+    defaultMessage: "HybrIT is the one-stop specialist for portals",
+  },
   highlightedProducts: {
     defaultMessage: "Highlighted products",
   },

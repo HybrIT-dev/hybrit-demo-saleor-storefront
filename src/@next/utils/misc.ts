@@ -152,3 +152,12 @@ export const hybritProductAttributes = {
   SIZE: "Grootte",
   MATERIAL: "Materiaal",
 };
+
+export const hybritAbout = {
+  HYBRIT_ABOUT_HEADER: "HybrIT is de one-stop-specialist voor portals",
+  HYBRIT_ABOUT_P1:
+    "Wij leveren portals met standaard API's die te koppelen zijn aan alle grotere ERP-systemen. Is maatwerk nodig? Of wil je speciale features toevoegen? Wij hebben alle kennis in huis om portalen precies naar uw wensen te bouwen en te integreren. Wij zorgen ervoor dat uw nieuwe online bedrijfsportaal, met of zonder mobiele app, volledig aansluit op uw bestaande IT-systeem en uw bedrijf zoveel mogelijk ondersteunt.",
+  HYBRIT_ABOUT_P2:
+    "HybrIT maakt uw digitale ambities waar; van advies tot uitvoering.",
+  HYBRIT_ABOUT_P3: "Neem contact op met HybrIT!",
+};

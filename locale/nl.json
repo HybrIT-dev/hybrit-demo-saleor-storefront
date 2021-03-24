@@ -363,6 +363,18 @@
   "components_dot_Select_dot_SelectOptionsList_dot_1394135378": {
     "string": "Geen opties"
   },
+  "intl_dot_commonMessages_dot_hybritAboutHeader": {
+    "string": "HybrIT is de one-stop-specialist voor portals"
+  },
+  "intl_dot_commonMessages_dot_hybritAboutP1": {
+    "string": "Wij leveren portals met standaard API's die te koppelen zijn aan alle grotere ERP-systemen. Is maatwerk nodig? Of wil je speciale features toevoegen? Wij hebben alle kennis in huis om portalen precies naar uw wensen te bouwen en te integreren. Wij zorgen ervoor dat uw nieuwe online bedrijfsportaal, met of zonder mobiele app, volledig aansluit op uw bestaande IT-systeem en uw bedrijf zoveel mogelijk ondersteunt."
+  },
+  "intl_dot_commonMessages_dot_hybritAboutP2": {
+    "string": "HybrIT maakt uw digitale ambities waar; van advies tot uitvoering."
+  },
+  "intl_dot_commonMessages_dot_hybritAboutP3": {
+    "string": "Neem contact op met HybrIT!"
+  },
   "intl_dot_commonMessages_dot_collections": {
     "string": "Collecties"
   },
