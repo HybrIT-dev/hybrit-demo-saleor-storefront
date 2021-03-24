@@ -363,6 +363,18 @@
   "components_dot_Select_dot_SelectOptionsList_dot_1394135378": {
     "string": "Geen opties"
   },
+  "intl_dot_commonMessages_dot_collections": {
+    "string": "Collecties"
+  },
+  "intl_dot_commonMessages_dot_highlightedProducts": {
+    "string": "Uitgelichte producten"
+  },
+  "intl_dot_commonMessages_dot_offers": {
+    "string": "Aanbiedingen"
+  },
+  "intl_dot_commonMessages_dot_aboutUs": {
+    "string": "Over ons"
+  },
   "intl_dot_commonMessages_dot_bottleSize": {
     "string": "Flessengrootte"
   },

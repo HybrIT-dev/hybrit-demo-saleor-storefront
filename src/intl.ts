@@ -1,6 +1,18 @@
 import { defineMessages, IntlShape } from "react-intl";
 
 export const commonMessages = defineMessages({
+  highlightedProducts: {
+    defaultMessage: "Highlighted products",
+  },
+  offers: {
+    defaultMessage: "Offers",
+  },
+  aboutUs: {
+    defaultMessage: "About us",
+  },
+  collections: {
+    defaultMessage: "Collections",
+  },
   bottleSize: {
     defaultMessage: "Bottle Size",
   },

@@ -36,6 +36,14 @@ export const NavLink: React.FC<NavLinkProps> = ({ item, ...props }) => {
         ? intl.formatMessage(commonMessages.office)
         : name === hybritMainMenuItems.KEUKEN
         ? intl.formatMessage(commonMessages.kitchen)
+        : name === hybritMainMenuItems.COLLECTIONS
+        ? intl.formatMessage(commonMessages.collections)
+        : name === hybritMainMenuItems.HIGHLIGHTED_PRODUCTS
+        ? intl.formatMessage(commonMessages.highlightedProducts)
+        : name === hybritMainMenuItems.OFFERS
+        ? intl.formatMessage(commonMessages.offers)
+        : name === hybritMainMenuItems.ABOUT_US
+        ? intl.formatMessage(commonMessages.aboutUs)
         : name}
     </Link>
   );

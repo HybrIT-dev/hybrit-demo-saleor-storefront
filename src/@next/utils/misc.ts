@@ -93,6 +93,10 @@ export function translateHybritAttribute(
 }
 
 export const hybritMainMenuItems = {
+  COLLECTIONS: "Collecties",
+  HIGHLIGHTED_PRODUCTS: "Uitgelichte producten",
+  OFFERS: "Aanbiedingen",
+  ABOUT_US: "Over Ons",
   HYBRIT_COLLECTION: "HybrIT Collectie",
   HYBRIT_COLLECTIE: "HybrIT Collection",
   HYBRIT_OFFICE_GADGETS: "Hybrit Office Gadgets",
