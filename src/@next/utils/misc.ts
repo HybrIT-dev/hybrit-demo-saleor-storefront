@@ -92,7 +92,11 @@ export function translateHybritAttribute(
     : name;
 }
 
-export function translateMenuItems(name, intl, commonMessages) {
+export function translateMenuItems(
+  name: string,
+  intl: any,
+  commonMessages: any
+) {
   return name === hybritMenuItems.HYBRIT_COLLECTION
     ? intl.formatMessage(commonMessages.hybritCollection)
     : name === hybritMenuItems.DRANKJES
