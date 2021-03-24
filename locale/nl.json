@@ -363,6 +363,27 @@
   "components_dot_Select_dot_SelectOptionsList_dot_1394135378": {
     "string": "Geen opties"
   },
+  "intl_dot_commonMessages_dot_bottleSize": {
+    "string": "Flessengrootte"
+  },
+  "intl_dot_commonMessages_dot_contents": {
+    "string": "Inhoud"
+  },
+  "intl_dot_commonMessages_dot_flavour": {
+    "string": "Smaak"
+  },
+  "intl_dot_commonMessages_dot_ingredients": {
+    "string": "Ingredienten"
+  },
+  "intl_dot_commonMessages_dot_color": {
+    "string": "Kleur"
+  },
+  "intl_dot_commonMessages_dot_material": {
+    "string": "Materiaal"
+  },
+  "intl_dot_commonMessages_dot_size": {
+    "string": "Grootte"
+  },
   "intl_dot_commonMessages_dot_hybritPen": {
     "string": "HybrIT Balpen"
   },

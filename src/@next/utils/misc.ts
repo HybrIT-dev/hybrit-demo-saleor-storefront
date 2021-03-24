@@ -70,6 +70,28 @@ export function translateHybritBreadcrumbs(
   }
 }
 
+export function translateHybritAttribute(
+  name: string,
+  intl: any,
+  commonMessages: any
+) {
+  return name === hybritProductAttributes.BOTTLE_SIZE
+    ? intl.formatMessage(commonMessages.bottleSize)
+    : name === hybritProductAttributes.CONTENTS
+    ? intl.formatMessage(commonMessages.contents)
+    : name === hybritProductAttributes.FLAVOUR
+    ? intl.formatMessage(commonMessages.flavour)
+    : name === hybritProductAttributes.INGREDIENTS
+    ? intl.formatMessage(commonMessages.ingredients)
+    : name === hybritProductAttributes.COLOR
+    ? intl.formatMessage(commonMessages.color)
+    : name === hybritProductAttributes.MATERIAL
+    ? intl.formatMessage(commonMessages.material)
+    : name === hybritProductAttributes.SIZE
+    ? intl.formatMessage(commonMessages.size)
+    : name;
+}
+
 export const hybritMainMenuItems = {
   HYBRIT_COLLECTION: "HybrIT Collectie",
   HYBRIT_COLLECTIE: "HybrIT Collection",
@@ -95,4 +117,14 @@ export const hybritProductDescriptions = {
   HYBRIT_PEN: "Handige HybrIT style balpen met opberg etui",
   HYBRIT_SSD: "Een razendsnelle 512GB External SSD in HybrIT style oranje",
   HYBRIT_CUP: "Een handig espresso kopje in HybrIT stijl oranje of zwart",
+};
+
+export const hybritProductAttributes = {
+  BOTTLE_SIZE: "Flessengrootte",
+  FLAVOUR: "Smaak",
+  CONTENTS: "Inhoud",
+  INGREDIENTS: "Ingredienten",
+  COLOR: "Kleur",
+  SIZE: "Grootte",
+  MATERIAL: "Materiaal",
 };

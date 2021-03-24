@@ -1,5 +1,7 @@
-import React from "react";
-import { FormattedMessage } from "react-intl";
+import React, { ReactNode } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+import { commonMessages } from "@temp/intl";
+import { translateHybritAttribute } from "@utils/misc";
 
 import { RichTextEditorContent } from "@components/atoms";
 
@@ -17,6 +19,7 @@ export const ProductDescription: React.FC<IProps> = ({
   attributes,
 }: IProps) => {
   const [activeTab, setActiveTab] = React.useState<TABS>(TABS.DESCRIPTION);
+  const intl = useIntl();
   return (
     <S.Wrapper>
       <S.Tabs>
@@ -47,7 +50,6 @@ export const ProductDescription: React.FC<IProps> = ({
           <FormattedMessage defaultMessage="ATTRIBUTES" />
         </S.TabTitle>
       </S.Tabs>
-
       <div hidden={activeTab !== TABS.DESCRIPTION}>
         {descriptionJson ? (
           <RichTextEditorContent jsonData={descriptionJson} />
@@ -61,7 +63,15 @@ export const ProductDescription: React.FC<IProps> = ({
           {attributes &&
             attributes.map((attribute, index) => (
               <li key={index}>
-                <S.AttributeName>{attribute.attribute.name}: </S.AttributeName>{" "}
+                <S.AttributeName>
+                  {
+                    translateHybritAttribute(
+                      attribute.attribute.name,
+                      intl,
+                      commonMessages
+                    ) as ReactNode
+                  }
+                </S.AttributeName>{" "}
                 {attribute.values.map(value => value.name).join(", ")}
               </li>
             ))}

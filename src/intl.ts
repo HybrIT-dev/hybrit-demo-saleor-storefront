@@ -1,6 +1,27 @@
 import { defineMessages, IntlShape } from "react-intl";
 
 export const commonMessages = defineMessages({
+  bottleSize: {
+    defaultMessage: "Bottle Size",
+  },
+  contents: {
+    defaultMessage: "Contents",
+  },
+  flavour: {
+    defaultMessage: "Flavour",
+  },
+  ingredients: {
+    defaultMessage: "Ingredients",
+  },
+  color: {
+    defaultMessage: "Color",
+  },
+  material: {
+    defaultMessage: "Material",
+  },
+  size: {
+    defaultMessage: "Size",
+  },
   hybritPen: {
     defaultMessage: "Hybrit Pen",
   },
