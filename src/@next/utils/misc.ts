@@ -116,6 +116,42 @@ export function translateMenuItems(
     : name;
 }
 
+export function translateHybritText(
+  text: string,
+  intl: any,
+  commonMessages: any,
+  formatBlock: (value: string) => any,
+  block: any
+) {
+  return text?.includes(hybritProductDescriptions.FS_BACKEND_DEV)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritFsBackEndDev))
+    : text?.includes(hybritProductDescriptions.FS_FRONTEND_DEV)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritFsFrontEndDev))
+    : text?.includes(hybritProductDescriptions.INTEG_DEV)
+    ? formatBlock(intl.formatMessage(commonMessages.integrationDev))
+    : text?.includes(hybritProductDescriptions.HYBRIT_BEER)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritBeerDescription))
+    : text?.includes(hybritProductDescriptions.HYBRIT_GINGER_BEER)
+    ? formatBlock(
+        intl.formatMessage(commonMessages.hybritGingerBeerDescription)
+      )
+    : text?.includes(hybritProductDescriptions.HYBRIT_PEN)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritPenDescription))
+    : text?.includes(hybritProductDescriptions.HYBRIT_SSD)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritExtSSDDescription))
+    : text?.includes(hybritProductDescriptions.HYBRIT_CUP)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritCoffeeCupDescription))
+    : text?.includes(hybritAbout.HYBRIT_ABOUT_HEADER)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritAboutHeader))
+    : text?.includes(hybritAbout.HYBRIT_ABOUT_P1)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritAboutP1))
+    : text?.includes(hybritAbout.HYBRIT_ABOUT_P2)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritAboutP2))
+    : text?.includes(hybritAbout.HYBRIT_ABOUT_P3)
+    ? formatBlock(intl.formatMessage(commonMessages.hybritAboutP3))
+    : { ...block, data: { text } };
+}
+
 export const hybritMenuItems = {
   COLLECTIONS: "Collecties",
   HIGHLIGHTED_PRODUCTS: "Uitgelichte producten",
