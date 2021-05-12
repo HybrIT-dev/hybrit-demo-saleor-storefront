@@ -47,7 +47,7 @@ const Page: React.FC<{
         <div className="home-page__hero-text">
           <div>
             <span className="home-page__hero__title">
-              <h1> HybrIT Connecting your business</h1>
+              <h1> Making your dreams affordable!</h1>
             </span>
           </div>
         </div>
@@ -63,7 +63,8 @@ const Page: React.FC<{
                 )}
               >
                 <Button testingContext="homepageHeroActionButton">
-                  {intl.formatMessage(commonMessages.seeOurServices)}
+                  {/* {intl.formatMessage(commonMessages.seeOurServices)} */}
+                  {intl.formatMessage(commonMessages.seeOurBikes)}
                 </Button>
               </Link>
             )

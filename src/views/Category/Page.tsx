@@ -86,9 +86,9 @@ const Page: React.FC<PageProps> = ({
       []
     );
 
-  const isDevopsEngineer = extractBreadcrumbs(category)[1]?.value === "DevOps";
-  const isSoftwareEngineer =
-    extractBreadcrumbs(category)[1]?.value === "Software Engineering";
+  // const isDevopsEngineer = extractBreadcrumbs(category)[1]?.value === "DevOps";
+  // const isSoftwareEngineer =
+  //   extractBreadcrumbs(category)[1]?.value === "Software Engineering";
 
   return (
     <div className="category">
@@ -113,11 +113,13 @@ const Page: React.FC<PageProps> = ({
           onCloseFilterAttribute={onAttributeFiltersChange}
         />
         <h2>
-          {isDevopsEngineer
+          {/* {isDevopsEngineer
             ? intl.formatMessage(commonMessages.theseDevopsEngineers)
             : isSoftwareEngineer
             ? intl.formatMessage(commonMessages.theseSoftwareEngineers)
-            : null}
+            : null} */}
+
+          {intl.formatMessage(commonMessages.theseBikes)}
         </h2>
         {canDisplayProducts && (
           <ProductList

@@ -408,6 +408,9 @@
   "intl_dot_commonMessages_dot_size": {
     "string": "Grootte"
   },
+  "intl_dot_commonMessages_dot_theseBikes": {
+    "string": "Deze fietsen hebben we beschikbaar!"
+  },
   "intl_dot_commonMessages_dot_hybritPen": {
     "string": "HybrIT Balpen"
   },
@@ -644,6 +647,9 @@
   },
   "intl_dot_commonMessages_dot_seeOurServices": {
     "string": "Bekijk Onze Diensten"
+  },
+  "intl_dot_commonMessages_dot_seeOurBikes": {
+    "string": "Onze Fietsen"
   },
   "intl_dot_commonMessages_dot_promoCode": {
     "string": "Promo code"

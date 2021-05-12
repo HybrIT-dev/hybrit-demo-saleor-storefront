@@ -8,7 +8,7 @@ export const Bar = styled.div`
   height: 5rem;
   // background-color: ${props => props.theme.tile.backgroundColor};
   background: none;
-  border: 1px solid #ff7e1d;
+  border: 1px solid #1d4df5;
   border-radius: 3px;
   display: flex;
   justify-content: space-between;

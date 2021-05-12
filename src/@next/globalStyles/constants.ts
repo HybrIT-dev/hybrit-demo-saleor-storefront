@@ -1,10 +1,13 @@
 // colors
-export const hybritOrangeDark = "#f15227";
-export const hybritOrangeLight = "#ff9b50";
-export const hybritOrangeExtraLight = "#ffaa6a";
-export const hybritOrange = "#ff7e1d";
-export const hybritOrangeGradientTransparent =
-  "linear-gradient(315deg, rgba(241,82,39,0.1), rgba(246,116,29,1))";
+export const hybritDark = "#4ba34e";
+export const hybritLight = "#67e06b";
+export const hybritExtraLight = "#82f586";
+export const hybrit = "#61CF64";
+export const vogueGreen = "#61CF64";
+export const hybritGradientTransparent =
+  "linear-gradient(315deg, rgba(255,255,255,0.1), rgba(97,207,100,1))";
+export const vogueGreenGradientTransparent =
+  "linear-gradient(315deg, rgba(255,255,255,0.1), rgba(97,207,100,1)";
 export const autofillColor = "rgb(250, 255, 189)";
 export const autofillColorSelected = "rgb(232, 240, 254)";
 export const baseFontColor = "#323232";
@@ -37,7 +40,7 @@ export const secondaryBlue = "#036DFF";
 
 // theme colors
 export const theme = {
-  activeMenuOption: hybritOrange,
+  activeMenuOption: vogueGreen,
   autofill: autofillColor,
   autofillSelected: autofillColorSelected,
   bannerBackground: secondaryGrey,
@@ -51,7 +54,7 @@ export const theme = {
   divider: grayLight,
   dividerDark: grayMedium,
   error: red,
-  hoverLightBackground: hybritOrangeGradientTransparent,
+  hoverLightBackground: hybritGradientTransparent,
   light: grayLight,
   lightFont: gray,
   listAttributeName: baseFontColorSemiTransparent,
@@ -59,18 +62,18 @@ export const theme = {
   overlay: overlayColor,
   primary: turquoise,
   primaryDark: black,
-  primaryLight: hybritOrangeExtraLight,
+  primaryLight: hybritExtraLight,
   primaryTransparent: turquoiseTransparent,
-  secondary: hybritOrange,
-  secondaryDark: hybritOrangeDark,
-  secondaryLight: hybritOrangeLight,
+  secondary: hybrit,
+  secondaryDark: hybritDark,
+  secondaryLight: hybritLight,
   secondaryOverlay: blueOverlay,
   secondaryOverlayDark: blueOverlayDark,
   success: green,
-  tabTitle: hybritOrangeDark,
+  tabTitle: hybritDark,
   tableDivider: tabelGray,
   tabsBorder: baseFontColorTransparent,
-  thumbnailBorder: hybritOrangeExtraLight,
+  thumbnailBorder: hybritExtraLight,
   white,
 };
 

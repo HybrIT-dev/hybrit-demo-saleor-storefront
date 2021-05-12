@@ -120,6 +120,9 @@ export const commonMessages = defineMessages({
   theseSoftwareEngineers: {
     defaultMessage: "We have these Software engineers ready for you!",
   },
+  theseBikes: {
+    defaultMessage: "We have these Bikes ready for you!",
+  },
   groceries: {
     defaultMessage: "Groceries",
   },
@@ -143,6 +146,9 @@ export const commonMessages = defineMessages({
   },
   seeOurServices: {
     defaultMessage: "Our services",
+  },
+  seeOurBikes: {
+    defaultMessage: "Our bikes",
   },
   highlighted: {
     defaultMessage: "Highlighted",
