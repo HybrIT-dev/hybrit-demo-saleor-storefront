@@ -1,5 +1,6 @@
 import React from "react";
-import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
+import { commonMessages } from "@temp/intl";
 import { Link } from "react-router-dom";
 
 import { Button, Loader } from "@components/atoms";
@@ -17,6 +18,7 @@ export const ProductList: React.FC<IProps> = ({
   testingContextId,
   onLoadMore = () => null,
 }: IProps) => {
+  const intl = useIntl();
   return (
     <>
       <S.List data-test="productList" data-test-id={testingContextId}>
@@ -42,7 +44,7 @@ export const ProductList: React.FC<IProps> = ({
               color="secondary"
               onClick={onLoadMore}
             >
-              <FormattedMessage defaultMessage="Meer +" />
+              {intl.formatMessage(commonMessages.moreButton)}
             </Button>
           )
         )}

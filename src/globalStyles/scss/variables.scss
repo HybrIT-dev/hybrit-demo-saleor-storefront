@@ -2,7 +2,7 @@
 $base-font-color: #323232;
 $black: #000;
 $blue-dark: #190c4e;
-$blue: #21125e;
+$blue: #2941cc;
 $gray-dark: #7d7d7d;
 $gray-light: #f6f6f6;
 $gray: #c4c4c4;
@@ -12,16 +12,18 @@ $turquoise-dark: #55c4b3;
 $turquoise-light: #f1f5f5;
 $turquoise: #51e9d2;
 
-$hybrit-orange-dark: #f15227;
-$hybrit-orange-light: #ff9b50;
-$hybrit-orange-extra-light: #ffaa6a;
-$hybrit-orange-super-light: #ffdcc2;
-$hybrit-orange: #ff7e1d;
-$hybrit-orange-gradient: linear-gradient(315deg, #f15227, #f3741d);
-$hybrit-orange-gradient-transparent: linear-gradient(
+$hybrit-dark: #4ba34e;
+$hybrit-light: #67e06b;
+$hybrit-extra-light: #82f586;
+$hybrit-super-light: #ffdcc2;
+$hybrit: #61cf64;
+$vogueWhite: "rgb(254, 255, 255)";
+$hybritPrimary: #1d4df5;
+$hybrit-gradient: linear-gradient(315deg, #f15227, #f3741d);
+$hybrit-gradient-transparent: linear-gradient(
   315deg,
-  rgba(241, 82, 39, 0.1),
-  rgba(246, 116, 29, 1)
+  rgba(255, 255, 255, 0.1),
+  rgba(254, 255, 255, 1)
 );
 
 $white: #fff;

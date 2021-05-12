@@ -3,7 +3,8 @@ import "./scss/index.scss";
 import * as React from "react";
 
 import { channelSlug } from "@temp/constants";
-import hybritImage from "../../images/hybrit-afbeelding.jpg";
+// import hybritImage from "../../images/hybrit-afbeelding.jpg";
+import VogueImage from "../../images/Vogue_bikes_bg.jpg";
 
 import { MetaWrapper } from "../../components";
 import Page from "./Page";
@@ -18,9 +19,9 @@ const View: React.FC = () => (
       errorPolicy="all"
     >
       {({ data, loading }) => {
-        const planetImage = {
+        const bgImage = {
           ...data.collection?.backgroundImage,
-          url: hybritImage,
+          url: VogueImage,
         };
         return (
           <MetaWrapper
@@ -31,7 +32,7 @@ const View: React.FC = () => (
           >
             <Page
               loading={loading}
-              backgroundImage={planetImage}
+              backgroundImage={bgImage}
               categories={data.categories}
               shop={data.shop}
             />

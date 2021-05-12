@@ -1,6 +1,7 @@
 import React from "react";
-import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 import { Button } from "@components/atoms";
+import { commonMessages } from "@temp/intl";
 
 export interface IAddToCartButton {
   disabled: boolean;
@@ -11,6 +12,8 @@ export const AddToCartButton: React.FC<IAddToCartButton> = ({
   onSubmit,
   disabled,
 }) => {
+  const intl = useIntl();
+  const addToCartString = intl.formatMessage(commonMessages.addToCart);
   return (
     <Button
       fullWidth
@@ -19,7 +22,7 @@ export const AddToCartButton: React.FC<IAddToCartButton> = ({
       color="primary"
       disabled={disabled}
     >
-      <FormattedMessage defaultMessage="Voeg toe aan winkelwagen" />
+      {addToCartString}
     </Button>
   );
 };

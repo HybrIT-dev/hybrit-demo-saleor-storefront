@@ -67,7 +67,7 @@
       transition: 0.3s;
 
       &:hover {
-        color: $hybrit-orange;
+        color: $hybritPrimary;
       }
     }
   }
@@ -114,7 +114,7 @@
 
     &:hover {
       svg * {
-        fill: $hybrit-orange;
+        fill: $hybrit;
       }
     }
 
@@ -145,7 +145,7 @@
 
   &__user {
     &--active * {
-      fill: $hybrit-orange;
+      fill: $hybritPrimary;
       fill-rule: inherit;
     }
   }
@@ -194,9 +194,9 @@
     }
 
     &:hover {
-      color: $hybrit-orange;
+      color: $hybrit;
       svg * {
-        fill: $hybrit-orange;
+        fill: $hybrit;
       }
     }
 

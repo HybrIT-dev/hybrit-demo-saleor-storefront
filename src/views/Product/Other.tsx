@@ -1,5 +1,8 @@
 import * as React from "react";
-import { FormattedMessage } from "react-intl";
+
+import { useIntl } from "react-intl";
+
+import { commonMessages } from "@temp/intl";
 
 import { ProductList } from "@components/organisms";
 
@@ -7,15 +10,18 @@ import { ProductDetails_product_category_products_edges } from "./gqlTypes/Produ
 
 const OtherProducts: React.FC<{
   products: ProductDetails_product_category_products_edges[];
-}> = ({ products }) => (
-  <div className="product-page__other-products">
-    <div className="container">
-      <h4 className="product-page__other-products__title">
-        <FormattedMessage defaultMessage="Andere producten in deze categorie" />
-      </h4>
-      <ProductList products={products.map(({ node }) => node)} />
+}> = ({ products }) => {
+  const intl = useIntl();
+  return (
+    <div className="product-page__other-products">
+      <div className="container">
+        <h4 className="product-page__other-products__title">
+          {intl.formatMessage(commonMessages.otherProducts)}
+        </h4>
+        <ProductList products={products.map(({ node }) => node)} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default OtherProducts;

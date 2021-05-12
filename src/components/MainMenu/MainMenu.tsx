@@ -10,6 +10,7 @@ import ReactSVG from "react-svg";
 import { DemoBanner } from "@components/atoms";
 import classNames from "classnames";
 import { channelSlug } from "@temp/constants";
+import { LanguageContext } from "../Locale";
 import {
   MenuDropdown,
   Offline,
@@ -17,6 +18,7 @@ import {
   OverlayContext,
   OverlayTheme,
   OverlayType,
+  SelectField,
 } from "..";
 import * as appPaths from "../../app/routes";
 import { maybe } from "../../core/utils";
@@ -26,7 +28,7 @@ import { TypedMainMenuQuery } from "./queries";
 import cartImg from "../../images/cart.svg";
 import hamburgerHoverImg from "../../images/hamburger-hover.svg";
 import hamburgerImg from "../../images/hamburger.svg";
-import logoImg from "../../images/Hybrit_Logo_CMYK.svg";
+import logoImg from "../../images/Vogue_logo.png";
 import searchImg from "../../images/search.svg";
 import userImg from "../../images/user.svg";
 import {
@@ -34,6 +36,7 @@ import {
   smallScreen,
 } from "../../globalStyles/scss/variables.scss";
 import "./scss/index.scss";
+import { SelectValue } from "../SelectField";
 
 interface MainMenuProps {
   demoMode: boolean;
@@ -75,6 +78,11 @@ const MainMenu: React.FC<MainMenuProps> = ({ demoMode }) => {
       setActiveDropdown(undefined);
     }
   };
+
+  const languageOptions = [
+    { label: "NL", value: "nl" },
+    { label: "EN", value: "en" },
+  ];
 
   return (
     <header
@@ -234,6 +242,29 @@ const MainMenu: React.FC<MainMenuProps> = ({ demoMode }) => {
                 query={{ minWidth: smallScreen }}
                 render={() => (
                   <>
+                    <li>
+                      <LanguageContext.Consumer>
+                        {({ language, setLanguage }) => (
+                          <SelectField
+                            onChange={e =>
+                              setLanguage((e as SelectValue).value as string)
+                            }
+                            value={languageOptions.find(
+                              option => option.value === language
+                            )}
+                            styles={{
+                              control: base => ({
+                                ...base,
+                                border: 0,
+                                boxShadow: "none",
+                                minWidth: "80px",
+                              }),
+                            }}
+                            options={languageOptions}
+                          />
+                        )}
+                      </LanguageContext.Consumer>
+                    </li>
                     {user ? (
                       <MenuDropdown
                         head={

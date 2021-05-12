@@ -101,7 +101,7 @@ export const CartRow: React.FC<IProps> = ({
   const engineerSkuCodes = ["1237", "1234", "1235", "1236"];
   const isEngineer = engineerSkuCodes.includes(sku as string);
   const labelNameType = isEngineer
-    ? intl.formatMessage(commonMessages.qtyHours)
+    ? intl.formatMessage(commonMessages.quantityHours)
     : intl.formatMessage(commonMessages.qty);
 
   return (

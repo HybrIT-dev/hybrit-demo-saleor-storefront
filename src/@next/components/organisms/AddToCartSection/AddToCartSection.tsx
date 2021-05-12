@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
-
 import { commonMessages } from "@temp/intl";
+import { translateHybritProduct } from "@utils/misc";
 import { ICheckoutModelLine } from "@saleor/sdk/lib/helpers";
 import {
   ProductDetails_product_pricing,
@@ -113,7 +113,9 @@ const AddToCartSection: React.FC<IAddToCartSection> = ({
 
   return (
     <S.AddToCartSelection>
-      <S.ProductNameHeader data-test="productName">{name}</S.ProductNameHeader>
+      <S.ProductNameHeader data-test="productName">
+        {translateHybritProduct(name, intl, commonMessages)}
+      </S.ProductNameHeader>
       {isOutOfStock ? (
         renderErrorMessage(
           intl.formatMessage(commonMessages.outOfStock),

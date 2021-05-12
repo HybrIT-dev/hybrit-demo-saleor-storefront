@@ -2,10 +2,11 @@ import "./scss/index.scss";
 
 import classNames from "classnames";
 import * as React from "react";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
-import { translateCategory } from "@utils/misc";
+import { hybritMenuItems } from "@utils/misc";
+import { commonMessages } from "@temp/intl";
 import { Button, Loader, ProductsFeatured } from "../../components";
 import { generateCategoryUrl } from "../../core/utils";
 
@@ -46,7 +47,7 @@ const Page: React.FC<{
         <div className="home-page__hero-text">
           <div>
             <span className="home-page__hero__title">
-              <h1> HybrIT Connecting your business</h1>
+              <h1> Making your dreams affordable!</h1>
             </span>
           </div>
         </div>
@@ -62,7 +63,8 @@ const Page: React.FC<{
                 )}
               >
                 <Button testingContext="homepageHeroActionButton">
-                  <FormattedMessage defaultMessage="Bekijk Onze Diensten" />
+                  {/* {intl.formatMessage(commonMessages.seeOurServices)} */}
+                  {intl.formatMessage(commonMessages.seeOurBikes)}
                 </Button>
               </Link>
             )
@@ -70,14 +72,12 @@ const Page: React.FC<{
         </div>
       </div>
       <ProductsFeatured
-        title={intl.formatMessage({ defaultMessage: "Uitgelicht" })}
+        title={intl.formatMessage(commonMessages.highlighted)}
       />
       {categoriesExist() && (
         <div className="home-page__categories">
           <div className="container">
-            <h3>
-              <FormattedMessage defaultMessage="WINKELEN PER CATEGORIE" />
-            </h3>
+            <h3>{intl.formatMessage(commonMessages.shopByCategory)}</h3>
             <div className="home-page__categories__list">
               {categories.edges.map(({ node: category }) => (
                 <div key={category.id}>
@@ -100,7 +100,11 @@ const Page: React.FC<{
                         })`,
                       }}
                     />
-                    <h3>{translateCategory(category.name)}</h3>
+                    <h3>
+                      {category.name === hybritMenuItems.HYBRIT_COLLECTIE
+                        ? intl.formatMessage(commonMessages.hybritCollection)
+                        : category.name}
+                    </h3>
                   </Link>
                 </div>
               ))}

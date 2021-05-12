@@ -17,7 +17,9 @@ const NavItem: React.FC<NavNestedItemProps> = ({
     children && children.length ? (
       <ul>
         {children.map((subItem, i) => (
-          <NavItem key={i} {...subItem} />
+          <>
+            <NavItem key={i} {...subItem} />
+          </>
         ))}
       </ul>
     ) : null;

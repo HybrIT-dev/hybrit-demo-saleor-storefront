@@ -1,5 +1,9 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { useIntl } from "react-intl";
+import { commonMessages } from "@temp/intl";
+
+import { translateMenuItems } from "src/@next/utils/misc";
 
 import {
   generateCategoryUrl,
@@ -21,10 +25,11 @@ interface NavLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     | SecondaryMenu_menu_items_children;
 }
 export const NavLink: React.FC<NavLinkProps> = ({ item, ...props }) => {
+  const intl = useIntl();
   const { name, url, category, collection, page } = item;
   const link = (url: string) => (
     <Link to={url} {...props}>
-      {name}
+      {translateMenuItems(name, intl, commonMessages)}
     </Link>
   );
 

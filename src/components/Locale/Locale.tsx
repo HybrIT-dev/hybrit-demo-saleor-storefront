@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
 
 import locale_AR from "@locale/ar.json";
@@ -207,20 +207,23 @@ function getKeyValueJson(messages: LocaleMessages): Record<string, string> {
 
 const defaultLocale = Locale.EN;
 
+const LanguageContext = React.createContext(null);
+
 const LocaleProvider: React.FC = ({ children }) => {
-  // For now locale can be set here
-  const locale = Locale.EN;
+  const [language, setLanguage] = useState<string>(defaultLocale);
 
   return (
-    <IntlProvider
-      defaultLocale={defaultLocale}
-      locale={locale}
-      messages={getKeyValueJson(localeData[locale])}
-      key={locale}
-    >
-      {children}
-    </IntlProvider>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      <IntlProvider
+        defaultLocale={defaultLocale}
+        locale={language}
+        messages={getKeyValueJson(localeData[language])}
+        key={language}
+      >
+        {children}
+      </IntlProvider>
+    </LanguageContext.Provider>
   );
 };
 
-export { LocaleProvider };
+export { LocaleProvider, LanguageContext };

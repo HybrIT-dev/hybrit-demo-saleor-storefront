@@ -3,6 +3,11 @@ import EditorJS, {
   ToolConstructable,
   ToolSettings,
 } from "@editorjs/editorjs";
+
+import { useIntl } from "react-intl";
+import { commonMessages } from "@temp/intl";
+import { translateHybritText } from "@utils/misc";
+
 import Header from "@editorjs/header";
 import List from "@editorjs/list";
 import Quote from "@editorjs/quote";
@@ -41,10 +46,27 @@ export const RichTextEditorContent: React.FC<RichTextEditorContentProps> = ({
   const editor = React.useRef<EditorJS>();
   const editorContainer = React.useRef<HTMLDivElement>(null);
 
-  const data: OutputData = JSON.parse(jsonData);
+  const intl = useIntl();
+
+  const oldData: OutputData = JSON.parse(jsonData);
+
+  const { blocks } = oldData;
+
+  const newBlocks = blocks.map((block: any) => {
+    const { text } = block.data;
+    const formatBlock = (value: string) => {
+      return { ...block, data: { text: value } };
+    };
+    return translateHybritText(text, intl, commonMessages, formatBlock, block);
+  });
+
+  const data = {
+    ...oldData,
+    blocks: newBlocks,
+  };
 
   React.useEffect(() => {
-    if (data && editorContainer.current) {
+    if (oldData && editorContainer.current) {
       editor.current = new EditorJS({
         data,
         holder: editorContainer.current,
