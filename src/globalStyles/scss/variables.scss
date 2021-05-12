@@ -19,7 +19,11 @@ $hybrit-super-light: #ffdcc2;
 $hybrit: #61cf64;
 $vogueWhite: "rgb(254, 255, 255)";
 $hybritPrimary: #1d4df5;
-$hybrit-gradient: linear-gradient(315deg, #f15227, #f3741d);
+$hybrit-gradient: linear-gradient(
+  315deg,
+  rgba(255, 255, 255, 0.1),
+  rgba(254, 255, 255, 1)
+);
 $hybrit-gradient-transparent: linear-gradient(
   315deg,
   rgba(255, 255, 255, 0.1),

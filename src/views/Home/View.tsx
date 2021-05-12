@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { channelSlug } from "@temp/constants";
 // import hybritImage from "../../images/hybrit-afbeelding.jpg";
-import VogueImage from "../../images/Vogue_bikes_bg.jpg";
+import VogueImage from "../../images/Vogue_bikes_bg2.jpg";
 
 import { MetaWrapper } from "../../components";
 import Page from "./Page";

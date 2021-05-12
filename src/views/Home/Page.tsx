@@ -40,7 +40,11 @@ const Page: React.FC<{
         className="home-page__hero"
         style={
           backgroundImage
-            ? { backgroundImage: `url(${backgroundImage.url})` }
+            ? {
+                backgroundImage: `url(${backgroundImage.url})`,
+                backgroundSize: "100%",
+                backgroundRepeat: "no-repeat",
+              }
             : null
         }
       >
