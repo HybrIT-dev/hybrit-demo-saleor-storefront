@@ -112,11 +112,11 @@
       transition: 0.3s;
     }
 
-    // &:hover {
-    //   // svg * {
-    //   //   // fill: $hybrit;
-    //   // }
-    // }
+    &:hover {
+      svg * {
+        fill: $hybrit;
+      }
+    }
 
     svg {
       vertical-align: bottom;
