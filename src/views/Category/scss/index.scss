@@ -39,6 +39,8 @@
     font-weight: 900;
     margin-bottom: $spacer * 2;
     margin-top: $spacer;
+    text-align: center;
+    width: 100%;
 
     @media (min-width: $small-screen) {
       font-size: 2vw;

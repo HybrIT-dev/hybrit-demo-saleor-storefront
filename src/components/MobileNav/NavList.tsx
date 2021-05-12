@@ -11,7 +11,7 @@ import { baseUrl } from "../../app/routes";
 import NavItem, { INavItem } from "./NavItem";
 
 import backImg from "../../images/arrow-back.svg";
-import logoImg from "../../images/Hybrit_Logo_CMYK.svg";
+import logoImg from "../../images/Vogue_logo.png";
 
 interface NavListProps {
   items: INavItem[];
@@ -86,7 +86,7 @@ class NavList extends React.PureComponent<NavListProps, NavListState> {
                 className="side-nav__menu-item-logo"
                 onClick={hideOverlay}
               >
-                <img src={logoImg} alt="Hybrit logo" />
+                <img src={logoImg} alt="Vogue logo" />
               </Link>
               <span className="side-nav__menu-item-close" onClick={hideOverlay}>
                 <span />
