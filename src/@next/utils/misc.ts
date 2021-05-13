@@ -111,10 +111,34 @@ export function translateMenuItems(
     ? intl.formatMessage(commonMessages.highlightedProducts)
     : name === hybritMenuItems.OFFERS
     ? intl.formatMessage(commonMessages.offers)
+    : name === hybritMenuItems.ALL_E_BIKES
+    ? intl.formatMessage(commonMessages.allEBikes)
+    : name === hybritMenuItems.DISCOVER_VOGUE
+    ? intl.formatMessage(commonMessages.discoverVogue)
+    : name === hybritMenuItems.STORES
+    ? intl.formatMessage(commonMessages.vogueStores)
     : name === hybritMenuItems.ABOUT_US
     ? intl.formatMessage(commonMessages.aboutUs)
     : name;
 }
+
+export const hybritMenuItems = {
+  COLLECTIONS: "Collecties",
+  HIGHLIGHTED_PRODUCTS: "Uitgelichte producten",
+  OFFERS: "Aanbiedingen",
+  ABOUT_US: "Over Ons",
+  HYBRIT_COLLECTION: "HybrIT Collectie",
+  HYBRIT_COLLECTIE: "HybrIT Collection",
+  HYBRIT_OFFICE_GADGETS: "Hybrit Office Gadgets",
+  HYBRIT_KITCHEN: "HybrIT Kitchen",
+  HYBRIT_DRINKS: "HybrIT Drinks",
+  DRANKJES: "Drankjes",
+  KANTOOR: "Kantoor",
+  KEUKEN: "Keuken",
+  ALL_E_BIKES: "All E-Bikes",
+  DISCOVER_VOGUE: "Discover Vogue",
+  STORES: "Stores",
+};
 
 export function translateHybritText(
   text: string,
@@ -149,22 +173,50 @@ export function translateHybritText(
     ? formatBlock(intl.formatMessage(commonMessages.hybritAboutP2))
     : text?.includes(hybritAbout.HYBRIT_ABOUT_P3)
     ? formatBlock(intl.formatMessage(commonMessages.hybritAboutP3))
+    : text?.includes(vogueProductDescriptions.VOGUE_EASY_GO_part1)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueEasyGoPart1))
+    : text?.includes(vogueProductDescriptions.VOGUE_EASY_GO_part2)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueEasyGoPart2))
+    : text?.includes(vogueProductDescriptions.VOGUE_SLX_part1)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueSLXPart1))
+    : text?.includes(vogueProductDescriptions.VOGUE_SLX_part2)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueSLXPart2))
+    : text?.includes(vogueProductDescriptions.VOGUE_ELITE7_part1)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueElite7Part1))
+    : text?.includes(vogueProductDescriptions.VOGUE_ELITE7_part2)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueElite7Part2))
+    : text?.includes(vogueProductDescriptions.VOGUE_SUPERIOR_DELUXE_part1)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueSuperiorDeluxePart1))
+    : text?.includes(vogueProductDescriptions.VOGUE_SUPERIOR_DELUXE_part2)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueSuperiorDeluxePart2))
+    : text?.includes(vogueProductDescriptions.VOGUE_TRIVELO_part1)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueTriVeloPart1))
+    : text?.includes(vogueProductDescriptions.VOGUE_TRIVELO_part2)
+    ? formatBlock(intl.formatMessage(commonMessages.vogueTriVeloPart2))
     : { ...block, data: { text } };
 }
 
-export const hybritMenuItems = {
-  COLLECTIONS: "Collecties",
-  HIGHLIGHTED_PRODUCTS: "Uitgelichte producten",
-  OFFERS: "Aanbiedingen",
-  ABOUT_US: "Over Ons",
-  HYBRIT_COLLECTION: "HybrIT Collectie",
-  HYBRIT_COLLECTIE: "HybrIT Collection",
-  HYBRIT_OFFICE_GADGETS: "Hybrit Office Gadgets",
-  HYBRIT_KITCHEN: "HybrIT Kitchen",
-  HYBRIT_DRINKS: "HybrIT Drinks",
-  DRANKJES: "Drankjes",
-  KANTOOR: "Kantoor",
-  KEUKEN: "Keuken",
+export const vogueProductDescriptions = {
+  VOGUE_EASY_GO_part1:
+    "De Vogue Easy Go is een stoere vouwfiets voor ieder type fietser. De motor is te vinden in het achterwiel. Met 7 speed versnellingen en 5 digitale elektrische ondersteuning kom je heerlijk snel en zonder moeite bij je bestemming. De maximale snelheid van deze elektrische vouwfiets ligt op 25 kilometer per uur. Zo ben je snel onderweg over korte afstanden. De vaste zadelpen en voorvork zorgen voor een stabiele wegligging.",
+  VOGUE_EASY_GO_part2:
+    "De Easy Go is verkrijgbaar in twee verschillende kleuren: Silk-Blue en Matt-Black. Het gewicht is met 19 kilo goed te tillen om bijvoorbeeld de trein in te stappen. Met een maximaal belastbaar gewicht van 120 kg is deze fiets multifunctioneel te gebruiken. Ontdek de fraaie eigenschappen van de Vogue Easy Go nu bij één van onze dealers bij jou in de buurt.",
+  VOGUE_SLX_part1:
+    "Ben je op zoek naar een robuuste e-bike met nét iets meer functionaliteiten? Dan kom je uit bij de Vogue SLX. Dit model is onder meer voorzien van een Shimano Deore 9 speed versnellingen en motor op de trapas, waardoor je directe trapondersteuning ervaart tijdens het wegrijden. De 522WH accu, geïntegreerd in de frame, brengt je overal waar je wilt, zowel op korte als lange afstanden. Dankzij de verende voorvork en zadelpen merk je vrijwel niks van hobbels op de weg, en rijd je altijd comfortabel richting je eindbestemming.",
+  VOGUE_SLX_part2:
+    "Het frame van de Vogue SLX is dubbelwandig aluminium, hetgeen extra goed bestand is tegen roestvorming. Desondanks is het verstandig om de e-bike zoveel mogelijk binnen te stallen, om zodoende het frame en de accu te beschermen tegen externe factoren.",
+  VOGUE_ELITE7_part1:
+    "De Vogue Elite 7 is één van onze meest bekende edities van de Vogue e-bikes. Shimano Nexus 7 speed versnellingen geven je standaard opties om je ondersteuning in te stellen. Daarnaast heb je natuurlijk vanaf de digitale LCD kleuren display met usb lader voor je smartphone, ook 5 niveau’s van digitale ondersteuning. De motor bij deze elektrische fiets is te vinden op het voorwiel. Dit geeft een uniek gevoel aan je fietstocht. De motor is geruisloos en functioneert op basis van jouw rotatie. Dit zorgt voor een fraaie combinatie van trapondersteuning en gemak. De remmen zijn een Shimano Rollerbrake. Deze zijn van de hoogste kwaliteit, en voorkomen tevens dat je velgen na verloop van tijd gaan roesten. Daarnaast beschikken al onze voorwielmotor e-bikes voor uw veiligheid over een remlicht. De velgen zijn tevens van dubbelwandig aluminium, hetgeen jarenlange roestbestendigheid garandeert.",
+  VOGUE_ELITE7_part2:
+    "Kies voor de Vogue Elite 7. Deze is verkrijgbaar in drie kleuren: Matt-Black, Jeans-Blue en Mint-Green. Deze kleuren geven de fiets een fraaie en moderne uitstraling. Dankzij de moderne led verlichting aan voor- en achterkant, waarbij de achterverlichting geïntegreerd is in de accu, ben je altijd zichtbaar voor andere weggebruikers. Ga de weg op in stijl en geniet van tijdloos comfort met de Vogue Elite 7 e-bike.",
+  VOGUE_SUPERIOR_DELUXE_part1:
+    "Deze e-bakfiets is uitermate geschikt voor het vervoeren van onze kinderen, terwijl jij als bestuurder geniet van comfortabele trapondersteuning. Met de Vogue Superior Deluxe krijg jij het spreekwoordelijke duwtje in de rug. Dit model is voorzien van een motor op de trapas, en een sterke sensor om je direct de gewenste trapondersteuning te bieden. Betrouwbaar en stijlvol. De Superior Deluxe heeft een robuust uiterlijk met een matzwart aluminium frame, in combinatie met een bruine bak. Deze bak is voorzien van twee wielen aan beide kanten, waardoor je wegligging zeer stabiel is. In de laadbak is ruimte voor meerdere kinderen.",
+  VOGUE_SUPERIOR_DELUXE_part2:
+    "De display van de Superior Deluxe is gepositioneerd op de stang boven de bak. Deze stang fungeert tevens als stuur van de e-bakfiets. De Vogue Superior Deluxe vind je bij onze aangesloten erkende Vogue Bike dealers bij jou in de buurt.",
+  VOGUE_TRIVELO_part1:
+    "De Vogue Tri-Velo is een sportieve e-driewieler voor de doelgroep ouderen of mindervaliden. Deze driewieler beschikt over een stabiele wegligging met twee wielen achter, en één voor. De 7 speed Shimano derailleurversnelling geeft je genoeg mogelijkheden in combinatie met digitale ondersteuningen vanuit de motor. Het framemateriaal is aluminium en de kleur is matzwart of grijs. Zowel voor als achter is opbergruimte in de vorm van een mand. De maximale snelheid is 25 kilometer per uur, zeer geschikt voor de stedelijke én rurale omgeving.",
+  VOGUE_TRIVELO_part2:
+    "De motor van de Tri-Velo is te vinden op het voorwiel en de accu direct onder de achtermand. Met een gemiddelde actieradius van 50 kilometer is dit een ideaal vervoersmiddel. Onder de meest gunstige omstandigheden ligt de actieradius tussen de 60 en 80 kilometer. De Vogue Tri-Velo driewieler is verkrijgbaar bij onze aangesloten erkende Vogue Bike dealers.",
 };
 
 export const hybritProductDescriptions = {

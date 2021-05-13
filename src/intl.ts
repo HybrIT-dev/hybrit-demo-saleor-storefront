@@ -1,6 +1,58 @@
 import { defineMessages, IntlShape } from "react-intl";
 
 export const commonMessages = defineMessages({
+  theseBikes: {
+    defaultMessage: "We have these Bikes ready for you!",
+  },
+  allEBikes: {
+    defaultMessage: "All E-Bikes",
+  },
+  discoverVogue: {
+    defaultMessage: "Discover Vogue",
+  },
+  vogueStores: {
+    defaultMessage: "Stores",
+  },
+  vogueEasyGoPart1: {
+    defaultMessage:
+      "The Vogue Easy Go is a cool folding bike for every type of cyclist. The motor can be found in the rear wheel. With 7 speed gears and 5 digital electrical assistance you get to your destination wonderfully quickly and effortlessly. The maximum speed of this electric folding bicycle is 25 kilometers per hour. This way you are fast on the road over short distances. The fixed seatpost and front fork ensure stable road holding.",
+  },
+  vogueEasyGoPart2: {
+    defaultMessage:
+      "The Easy Go is available in two different colors: Silk-Blue and Matt-Black. The weight is sufficient to lift 19 kilos to board the train, for example. With a maximum load-bearing weight of 120 kg, this bicycle can be used multifunctionally. Discover the beautiful features of the Vogue Easy Go now at one of our dealers near you.",
+  },
+  vogueSLXPart1: {
+    defaultMessage:
+      "Are you looking for a robust e-bike with just that little bit more functionality? Then you end up with the Vogue SLX. This model is equipped with a Shimano Deore 9 speed gears and motor on the bottom bracket, so that you experience direct pedal support while driving away. The 522WH battery, integrated in the frame, takes you wherever you want, both on short and long distances. Thanks to the suspension fork and seatpost, you will hardly notice any bumps on the road, and you will always ride comfortably towards your final destination.",
+  },
+  vogueSLXPart2: {
+    defaultMessage:
+      "The frame of the Vogue SLX is double-walled aluminum, which is extra resistant to corrosion. Nevertheless, it is wise to store the e-bike indoors as much as possible, in order to protect the frame and the battery against external factors.",
+  },
+  vogueElite7Part1: {
+    defaultMessage:
+      "The Vogue Elite 7 is one of our most famous editions of the Vogue e-bikes. Shimano Nexus 7 speed gears give you standard options to adjust your support. In addition, from the digital LCD color display with USB charger for your smartphone, you also have 5 levels of digital support. The motor for this electric bicycle can be found on the front wheel. This gives a unique feeling to your bike ride. The motor is silent and functions based on your rotation. This provides a nice combination of pedal assistance and convenience. The brakes are a Shimano Rollerbrake. These are of the highest quality, and also prevent your rims from rusting over time. In addition, all our front-wheel motor e-bikes have a brake light for your safety. The rims are also made of double-walled aluminum, which guarantees years of rust resistance.",
+  },
+  vogueElite7Part2: {
+    defaultMessage:
+      "Choose the Vogue Elite 7. It is available in three colors: Matt-Black, Jeans-Blue and Mint-Green. These colors give the bicycle a beautiful and modern look. Thanks to the modern LED lighting at the front and rear, where the rear lighting is integrated in the battery, you are always visible to other road users. Hit the road in style and enjoy timeless comfort with the Vogue Elite 7 e-bike.",
+  },
+  vogueSuperiorDeluxePart1: {
+    defaultMessage:
+      "This e-cargo bike is ideal for transporting our children, while you as a driver enjoy comfortable pedal assistance. With the Vogue Superior Deluxe you get the proverbial boost. This model is equipped with a motor on the bottom bracket, and a strong sensor to immediately offer you the desired pedal support. Reliable and stylish. The Superior Deluxe has a robust appearance with a matt black aluminum frame, in combination with a brown tray. This box is equipped with two wheels on both sides, making your road holding very stable. There is room for several children in the cargo box.",
+  },
+  vogueSuperiorDeluxePart2: {
+    defaultMessage:
+      "The display of the Superior Deluxe is positioned on the bar above the tray. This bar also functions as the handlebar of the e-cargo bike. The Vogue Superior Deluxe can be found at our affiliated authorized Vogue Bike dealers near you.",
+  },
+  vogueTriVeloPart1: {
+    defaultMessage:
+      "The Vogue Tri-Velo is a sporty e-tricycle for the elderly or disabled target group. This tricycle has a stable road holding with two wheels at the back and one at the front. The 7 speed Shimano derailleur gear gives you plenty of options in combination with digital support from the motor. The frame material is aluminum and the color is matte black or gray. There is storage space in the form of a basket at the front and rear. The maximum speed is 25 kilometers per hour, very suitable for the urban and rural environment.",
+  },
+  vogueTriVeloPart2: {
+    defaultMessage:
+      "The engine of the Tri-Velo is located on the front wheel and the battery directly under the rear basket. With an average range of 50 kilometers, this is an ideal means of transport. Under the most favorable conditions, the range is between 60 and 80 kilometers. The Vogue Tri-Velo tricycle is available at our affiliated authorized Vogue Bike dealers.",
+  },
   hybritAboutP1: {
     defaultMessage:
       "We supply portals with standard APIs that can be linked to all larger ERP systems. Is customization necessary? Or do you want to add special features? We have all the knowledge to build and integrate portals exactly according to your wishes. We ensure that your new online company portal, with or without a mobile app, fully connects to your existing IT system and supports your company as much as possible.",
@@ -119,9 +171,6 @@ export const commonMessages = defineMessages({
   },
   theseSoftwareEngineers: {
     defaultMessage: "We have these Software engineers ready for you!",
-  },
-  theseBikes: {
-    defaultMessage: "We have these Bikes ready for you!",
   },
   groceries: {
     defaultMessage: "Groceries",
