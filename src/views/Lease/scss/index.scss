@@ -1,5 +1,19 @@
 @import "../../../globalStyles/scss/variables.scss";
 
-// .lease-page {
+.lease-page {
+  padding: 1rem 1rem;
 
-// }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". ."
+      ". ."
+      ". ."
+      ". .";
+  }
+}
