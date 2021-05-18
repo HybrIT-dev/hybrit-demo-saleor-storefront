@@ -27,11 +27,17 @@ interface NavLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 export const NavLink: React.FC<NavLinkProps> = ({ item, ...props }) => {
   const intl = useIntl();
   const { name, url, category, collection, page } = item;
-  const link = (url: string) => (
-    <Link to={url} {...props}>
-      {translateMenuItems(name, intl, commonMessages)}
-    </Link>
-  );
+  const link = (url: string) => {
+    let newHybritUrl;
+    if (url === "/page/e-bike-lease/") {
+      newHybritUrl = "/e-bike-lease/";
+    } else newHybritUrl = url;
+    return (
+      <Link to={newHybritUrl} {...props}>
+        {translateMenuItems(name, intl, commonMessages)}
+      </Link>
+    );
+  };
 
   if (url) {
     return (

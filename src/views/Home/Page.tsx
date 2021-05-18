@@ -10,6 +10,8 @@ import { commonMessages } from "@temp/intl";
 import { Button, Loader, ProductsFeatured } from "../../components";
 import { generateCategoryUrl } from "../../core/utils";
 
+import * as PreRender from "./PreRender";
+
 import {
   ProductsList_categories,
   ProductsList_shop,
@@ -31,27 +33,42 @@ const Page: React.FC<{
   };
   const intl = useIntl();
 
+  const [imageCounter, setImageCounter] = React.useState(0);
+  const [preRender, setPrerender] = React.useState("visible");
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setImageCounter(imageCounter => imageCounter + 1);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setPrerender("hidden");
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (imageCounter > 2)
+    setImageCounter(imageCounter => imageCounter - imageCounter);
+
   return (
     <>
       <script className="structured-data-list" type="application/ld+json">
         {structuredData(shop)}
       </script>
+
+      <PreRender.PreRenderImages val={preRender} />
+
       <div
         className="home-page__hero"
-        style={
-          backgroundImage
-            ? {
-                backgroundImage: `url(${backgroundImage.url})`,
-                backgroundSize: "100%",
-                backgroundRepeat: "no-repeat",
-              }
-            : null
-        }
+        style={PreRender.mappedBackgrounds[imageCounter]}
       >
         <div className="home-page__hero-text">
           <div>
             <span className="home-page__hero__title">
-              <h1> Making your dreams affordable!</h1>
+              <h1> Making your dreams affordable! </h1>
             </span>
           </div>
         </div>
