@@ -42,16 +42,15 @@ export const STATIC_PAGES = [
 export const SOCIAL_MEDIA = [
   {
     ariaLabel: "linkedin",
-    href: "https://nl.linkedin.com/company/hybrit-bv",
+    href: "",
     path: require("../images/linkedin-icon.svg"),
   },
 ];
 export const META_DEFAULTS = {
   custom: [],
-  description:
-    "Open-source PWA storefront built with Saleor's e-commerce GraphQL API. Written with React and TypeScript.",
+  description: "Vogue",
   image: `${window.location.origin}${require("../images/logo.svg")}`,
-  title: "Demo PWA Storefront – HybrIT e-commerce",
+  title: "Vogue Bike",
   type: "website",
   url: window.location.origin,
 };
