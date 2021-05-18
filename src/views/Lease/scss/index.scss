@@ -3,17 +3,31 @@
 .lease-page {
   padding: 1rem 1rem;
 
+  .lease-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .lease-description {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 2rem;
+  }
+
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
     gap: 10px 10px;
-    grid-template-areas:
-      ". ."
-      ". ."
-      ". ."
-      ". ."
-      ". ."
-      ". .";
+  }
+  .grid-container-period {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 10px;
+  }
+  .grid-container-birth {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 10px;
   }
 }

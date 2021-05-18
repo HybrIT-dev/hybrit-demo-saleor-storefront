@@ -21,15 +21,31 @@ const Page: React.FC<{
   loading: boolean;
 }> = ({ loading }) => {
   const [bikeSelection, setBikeSelection] = React.useState<any>();
+  const [leasePeriodSelection, setLeasePeriodSelection] = React.useState<any>();
   const intl = useIntl();
 
   const bikeOptions = [
     { label: "Vogue SLX", value: "Vogue SLX" },
-    { label: "Vogue Elite", value: "Vogue Elite" },
+    { label: "Vogue Elite 7", value: "Vogue Elite 7" },
+    { label: "Vogue Easy Go", value: "Vogue Easy Go" },
+    { label: "Vogue Easy Go", value: "Vogue Easy Go" },
+    { label: "Vogue Superior Deluxe", value: "Vogue Superior Deluxe" },
+    { label: "Vogue Tri-Velo", value: "Vogue Tri-Velo" },
+  ];
+
+  const leasePeriodOptions = [
+    { label: "12 Maanden", value: "12 Maanden" },
+    { label: "24 Maanden", value: "12 Maanden" },
+    { label: "36 Maanden", value: "12 Maanden" },
+    { label: "48 Maanden", value: "12 Maanden" },
   ];
 
   return (
     <div className="lease-page">
+      <div className="lease-title">E-bike Leasen</div>
+      <div className="lease-description">
+        Vul onderstaand formulier in om een lease plan op maat te ontvangen.
+      </div>
       <Form
         errors={maybe(() => null, [])}
         onSubmit={(event, { email, password }) => {
@@ -39,50 +55,93 @@ const Page: React.FC<{
         }}
       >
         <div className="grid-container">
+          <div />
           <SelectField
             onChange={e => setBikeSelection((e as SelectValue).value as string)}
             value={bikeOptions.find(option => option.value === bikeSelection)}
             styles={{
               control: base => ({
                 ...base,
-                border: 0,
-                boxShadow: "none",
-                minWidth: "80px",
               }),
             }}
             options={bikeOptions}
+            placeholder="E-Bike type"
           />
-          {bikeSelection && `${bikeSelection}`}
+          <div className="grid-container-period">
+            <SelectField
+              onChange={e =>
+                setLeasePeriodSelection((e as SelectValue).value as string)
+              }
+              value={leasePeriodOptions.find(
+                option => option.value === leasePeriodSelection
+              )}
+              styles={{
+                control: base => ({
+                  ...base,
+                }),
+              }}
+              options={leasePeriodOptions}
+              placeholder="Lease periode"
+            />
+            <div />
+          </div>
+          <div />
+          <div />
           <TextField
             name="firstName"
             // label={intl.formatMessage(commonMessages.eMail)}
-            label="First Name"
+            label="Voornaam"
             type="text"
             required
           />
-          <div />
           <TextField
             name="lastName"
             // label={intl.formatMessage(commonMessages.eMail)}
-            label="Last Name"
+            label="Achternaam"
             type="text"
             required
           />
           <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
           <TextField
-            name="email"
+            name="password"
             autoComplete="email"
-            label={intl.formatMessage(commonMessages.eMail)}
+            label="Email"
             type="email"
             required
           />
-          <TextField
-            name="password"
-            autoComplete="password"
-            label={intl.formatMessage(commonMessages.password)}
-            type="password"
-            required
-          />
+          <div />
+          <div />
+          <div />
+          Geboortedatum
+          <div />
+          <div />
+          <div />
+          <div className="grid-container-birth">
+            <TextField name="day" label="Dag" type="text" required />
+            <TextField name="month" label="Maand" type="text" required />
+            <TextField name="year" label="Jaar" type="text" required />
+          </div>
+          <div />
+          <div />
+          <div />
+          <TextField name="street" label="Straat" type="text" required />
+          <div className="grid-container-period">
+            <TextField name="housenr" label="Nr" type="text" required />
+          </div>
+          <div />
+          <div />
+          <TextField name="city" label="Plaats" type="text" required />
+          <div className="grid-container-period">
+            <TextField name="zipcode" label="Postcode" type="text" required />
+          </div>
+          <div />
+          <div />
+          <TextField name="phone" label="Telefoon" type="text" required />
         </div>
         <div className="login__content__button">
           <Button
