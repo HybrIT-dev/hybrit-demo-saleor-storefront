@@ -45,33 +45,39 @@ const Page: React.FC<{
       >
         <div className="grid-container">
           <div />
-          <SelectField
-            onChange={e => setBikeSelection((e as SelectValue).value as string)}
-            value={bikeOptions.find(option => option.value === bikeSelection)}
-            styles={{
-              control: base => ({
-                ...base,
-              }),
-            }}
-            options={bikeOptions}
-            placeholder="E-Bike type"
-          />
-          <div className="grid-container-period">
+          <div className="form-cell">
             <SelectField
               onChange={e =>
-                setLeasePeriodSelection((e as SelectValue).value as string)
+                setBikeSelection((e as SelectValue).value as string)
               }
-              value={leasePeriodOptions.find(
-                option => option.value === leasePeriodSelection
-              )}
+              value={bikeOptions.find(option => option.value === bikeSelection)}
               styles={{
                 control: base => ({
                   ...base,
                 }),
               }}
-              options={leasePeriodOptions}
-              placeholder="Lease periode"
+              options={bikeOptions}
+              placeholder="E-Bike type"
             />
+          </div>
+          <div className="grid-container-period">
+            <div className="form-cell-sm">
+              <SelectField
+                onChange={e =>
+                  setLeasePeriodSelection((e as SelectValue).value as string)
+                }
+                value={leasePeriodOptions.find(
+                  option => option.value === leasePeriodSelection
+                )}
+                styles={{
+                  control: base => ({
+                    ...base,
+                  }),
+                }}
+                options={leasePeriodOptions}
+                placeholder="Lease periode"
+              />
+            </div>
             <div />
           </div>
           <div />
