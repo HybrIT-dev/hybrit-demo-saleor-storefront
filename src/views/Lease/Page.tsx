@@ -1,21 +1,12 @@
 import "./scss/index.scss";
 
-// import classNames from "classnames";
 import * as React from "react";
 import { Button, Form, SelectField, TextField } from "@temp/components";
 import { maybe } from "@utils/misc";
 import { useIntl } from "react-intl";
-// import { Link } from "react-router-dom";
 
 import { commonMessages } from "@temp/intl";
 import { SelectValue } from "@temp/components/SelectField";
-// import { Button, Loader } from "../../components";
-
-// import {
-//   ProductsList_categories,
-//   ProductsList_shop,
-//   ProductsList_collection_backgroundImage,
-// } from "./gqlTypes/ProductsList";
 
 const Page: React.FC<{
   loading: boolean;
@@ -50,8 +41,6 @@ const Page: React.FC<{
         errors={maybe(() => null, [])}
         onSubmit={(event, { email, password }) => {
           event.preventDefault();
-          // const redirectUrl = `${window.location.origin}${accountConfirmUrl}`;
-          // registerCustomer({ variables: { email, password, redirectUrl } });
         }}
       >
         <div className="grid-container">
@@ -87,20 +76,8 @@ const Page: React.FC<{
           </div>
           <div />
           <div />
-          <TextField
-            name="firstName"
-            // label={intl.formatMessage(commonMessages.eMail)}
-            label="Voornaam"
-            type="text"
-            required
-          />
-          <TextField
-            name="lastName"
-            // label={intl.formatMessage(commonMessages.eMail)}
-            label="Achternaam"
-            type="text"
-            required
-          />
+          <TextField name="firstName" label="Voornaam" type="text" required />
+          <TextField name="lastName" label="Achternaam" type="text" required />
           <div />
           <div />
           <div />
