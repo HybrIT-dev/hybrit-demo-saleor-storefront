@@ -1,10 +1,9 @@
 import React from "react";
 
-import tweeDames from "../../images/voguefietstweedames.jpg";
-import dame from "../../images/Vogue_bikes_bg2.jpg";
-import fbDame from "../../images/Facebook-vogue-elektrische-fietsen.png";
+import dame from "../../images/herobackground.jpg";
+import fbDame from "../../images/herobackground2.jpg";
 
-export const visconImages = [dame, tweeDames, fbDame];
+export const visconImages = [dame, fbDame];
 
 export const mappedBackgrounds = visconImages.map(img => {
   return {
@@ -30,14 +29,6 @@ export const PreRenderImages = ({ val }) => {
   } as React.CSSProperties;
   return (
     <div>
-      <div
-        style={{
-          backgroundImage: `url(${tweeDames})`,
-          ...defaultProps,
-        }}
-      >
-        {children}
-      </div>
       <div
         style={{
           backgroundImage: `url(${fbDame})`,

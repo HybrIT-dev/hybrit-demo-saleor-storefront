@@ -205,7 +205,7 @@ function getKeyValueJson(messages: LocaleMessages): Record<string, string> {
   }
 }
 
-const defaultLocale = Locale.EN;
+const defaultLocale = Locale.NL;
 
 const LanguageContext = React.createContext(null);
 

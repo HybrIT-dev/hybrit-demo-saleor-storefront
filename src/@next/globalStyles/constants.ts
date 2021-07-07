@@ -1,9 +1,9 @@
 // colors
-export const hybritDark = "#4ba34e";
-export const hybritLight = "#67e06b";
-export const hybritExtraLight = "#82f586";
-export const hybrit = "#61CF64";
-export const vogueGreen = "#61CF64";
+export const hybritDark = "#cc7f27";
+export const hybritLight = "#ffab4a";
+export const hybritExtraLight = "#ffbc70";
+export const hybrit = "#f0c28c";
+export const vogueGreen = "#f0c28c";
 export const hybritGradientTransparent =
   "linear-gradient(315deg, rgba(255,255,255,0.1), rgba(97,207,100,1))";
 export const vogueGreenGradientTransparent =
@@ -23,7 +23,7 @@ export const gray = "#7d7d7d";
 export const grayMedium = "#c4c4c4";
 export const grayDark = "#323232";
 export const grayLight = "#f1f5f5";
-export const green = "#3ed256";
+export const green = "#cc8529";
 export const overlayColor = "rgba(199, 207, 207, 0.8)";
 export const rose = "#c22d74";
 export const red = "#be0000";
@@ -61,7 +61,7 @@ export const theme = {
   listAttributeName: baseFontColorSemiTransparent,
   listBullet: darkGreen,
   overlay: overlayColor,
-  primary: turquoise,
+  primary: "#e69639",
   primaryDark: black,
   primaryLight: hybritExtraLight,
   primaryTransparent: turquoiseTransparent,
