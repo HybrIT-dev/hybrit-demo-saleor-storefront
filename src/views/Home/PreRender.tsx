@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import dame from "../../images/herobackground.jpg";
 import fbDame from "../../images/herobackground2.jpg";
 

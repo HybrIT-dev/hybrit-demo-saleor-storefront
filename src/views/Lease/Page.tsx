@@ -34,13 +34,13 @@ const Page: React.FC<{
     <div className="lease-page">
       <div className="lease-title">Kraan huren</div>
       <div className="lease-description">
-      Peinemann Kranen biedt diverse kranen aan welke u kunt huren voor een korte of lange periode.
-      <div>Wat de klus ook is, Peinemann heeft de juiste kraan voor u beschikbaar.
-      </div>
+        Peinemann Kranen biedt diverse kranen aan welke u kunt huren voor een
+        korte of lange periode.
         <div>
-        Vul onderstaand formulier in om een aanvraag in te dienen.
+          Wat de klus ook is, Peinemann heeft de juiste kraan voor u
+          beschikbaar.
         </div>
-
+        <div>Vul onderstaand formulier in om een aanvraag in te dienen.</div>
       </div>
       <Form
         errors={maybe(() => null, [])}
