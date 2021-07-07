@@ -2,7 +2,7 @@ import { defineMessages, IntlShape } from "react-intl";
 
 export const commonMessages = defineMessages({
   theseBikes: {
-    defaultMessage: "We have these Bikes ready for you!",
+    defaultMessage: "We have these cranes ready for you!",
   },
   allEBikes: {
     defaultMessage: "All E-Bikes",
@@ -197,7 +197,7 @@ export const commonMessages = defineMessages({
     defaultMessage: "Our services",
   },
   seeOurBikes: {
-    defaultMessage: "Our bikes",
+    defaultMessage: "Our Products",
   },
   highlighted: {
     defaultMessage: "Highlighted",

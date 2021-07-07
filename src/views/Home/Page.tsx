@@ -50,7 +50,7 @@ const Page: React.FC<{
     return () => clearTimeout(timer);
   }, []);
 
-  if (imageCounter > 2)
+  if (imageCounter > 1)
     setImageCounter(imageCounter => imageCounter - imageCounter);
 
   return (
@@ -68,7 +68,7 @@ const Page: React.FC<{
         <div className="home-page__hero-text">
           <div>
             <span className="home-page__hero__title">
-              <h1> Making your dreams affordable! </h1>
+              <h1> ALLES ONDER ÉÉN DAK! </h1>
             </span>
           </div>
         </div>

@@ -16,12 +16,11 @@ const Page: React.FC<{
   const intl = useIntl();
 
   const bikeOptions = [
-    { label: "Vogue SLX", value: "Vogue SLX" },
-    { label: "Vogue Elite 7", value: "Vogue Elite 7" },
-    { label: "Vogue Easy Go", value: "Vogue Easy Go" },
-    { label: "Vogue Easy Go", value: "Vogue Easy Go" },
-    { label: "Vogue Superior Deluxe", value: "Vogue Superior Deluxe" },
-    { label: "Vogue Tri-Velo", value: "Vogue Tri-Velo" },
+    { label: "Bundeltrekker", value: "Bundeltrekker" },
+    { label: "Mobiele torenkraan", value: "Mobiele torenkraan" },
+    { label: "Rupskraan", value: "Rupskraan" },
+    { label: "Telescoopkraan", value: "Telescoopkraan" },
+    { label: "Yardkraan", value: "Yardkraan" },
   ];
 
   const leasePeriodOptions = [
@@ -33,9 +32,15 @@ const Page: React.FC<{
 
   return (
     <div className="lease-page">
-      <div className="lease-title">E-bike Leasen</div>
+      <div className="lease-title">Kraan huren</div>
       <div className="lease-description">
-        Vul onderstaand formulier in om een lease plan op maat te ontvangen.
+      Peinemann Kranen biedt diverse kranen aan welke u kunt huren voor een korte of lange periode.
+      <div>Wat de klus ook is, Peinemann heeft de juiste kraan voor u beschikbaar.
+      </div>
+        <div>
+        Vul onderstaand formulier in om een aanvraag in te dienen.
+        </div>
+
       </div>
       <Form
         errors={maybe(() => null, [])}
@@ -57,7 +62,7 @@ const Page: React.FC<{
                 }),
               }}
               options={bikeOptions}
-              placeholder="E-Bike type"
+              placeholder="Kraan type"
             />
           </div>
           <div className="grid-container-period">
@@ -75,7 +80,7 @@ const Page: React.FC<{
                   }),
                 }}
                 options={leasePeriodOptions}
-                placeholder="Lease periode"
+                placeholder="Huur periode"
               />
             </div>
             <div />
@@ -134,7 +139,7 @@ const Page: React.FC<{
           >
             {loading
               ? intl.formatMessage(commonMessages.loading)
-              : intl.formatMessage({ defaultMessage: "Registreren" })}
+              : intl.formatMessage({ defaultMessage: "Aanvraag indienen" })}
           </Button>
         </div>
       </Form>

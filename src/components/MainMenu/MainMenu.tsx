@@ -28,7 +28,7 @@ import { TypedMainMenuQuery } from "./queries";
 import cartImg from "../../images/cart.svg";
 import hamburgerHoverImg from "../../images/hamburger-hover.svg";
 import hamburgerImg from "../../images/hamburger.svg";
-import logoImg from "../../images/Vogue_logo.png";
+import logoImg from "../../images/logo-big-lifting-solutions.jpg";
 import searchImg from "../../images/search.svg";
 import userImg from "../../images/user.svg";
 import {
